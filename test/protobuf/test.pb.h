@@ -26,6 +26,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
@@ -36,10 +37,256 @@ void protobuf_AddDesc_test_2eproto();
 void protobuf_AssignDesc_test_2eproto();
 void protobuf_ShutdownFile_test_2eproto();
 
+class ErrorMsg;
+class GetFriendListRequest;
+class GetFriendListResponse;
 class LoginRequest;
 class LoginResponse;
+class User;
 
+enum User_Sex {
+  User_Sex_man = 0,
+  User_Sex_woman = 1,
+  User_Sex_User_Sex_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  User_Sex_User_Sex_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool User_Sex_IsValid(int value);
+const User_Sex User_Sex_Sex_MIN = User_Sex_man;
+const User_Sex User_Sex_Sex_MAX = User_Sex_woman;
+const int User_Sex_Sex_ARRAYSIZE = User_Sex_Sex_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* User_Sex_descriptor();
+inline const ::std::string& User_Sex_Name(User_Sex value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    User_Sex_descriptor(), value);
+}
+inline bool User_Sex_Parse(
+    const ::std::string& name, User_Sex* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<User_Sex>(
+    User_Sex_descriptor(), name, value);
+}
 // ===================================================================
+
+class ErrorMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik.ErrorMsg) */ {
+ public:
+  ErrorMsg();
+  virtual ~ErrorMsg();
+
+  ErrorMsg(const ErrorMsg& from);
+
+  inline ErrorMsg& operator=(const ErrorMsg& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ErrorMsg& default_instance();
+
+  void Swap(ErrorMsg* other);
+
+  // implements Message ----------------------------------------------
+
+  inline ErrorMsg* New() const { return New(NULL); }
+
+  ErrorMsg* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ErrorMsg& from);
+  void MergeFrom(const ErrorMsg& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(ErrorMsg* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 error = 1;
+  void clear_error();
+  static const int kErrorFieldNumber = 1;
+  ::google::protobuf::int32 error() const;
+  void set_error(::google::protobuf::int32 value);
+
+  // optional bytes error_msg = 2;
+  void clear_error_msg();
+  static const int kErrorMsgFieldNumber = 2;
+  const ::std::string& error_msg() const;
+  void set_error_msg(const ::std::string& value);
+  void set_error_msg(const char* value);
+  void set_error_msg(const void* value, size_t size);
+  ::std::string* mutable_error_msg();
+  ::std::string* release_error_msg();
+  void set_allocated_error_msg(::std::string* error_msg);
+
+  // @@protoc_insertion_point(class_scope:ik.ErrorMsg)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr error_msg_;
+  ::google::protobuf::int32 error_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_test_2eproto();
+  friend void protobuf_AssignDesc_test_2eproto();
+  friend void protobuf_ShutdownFile_test_2eproto();
+
+  void InitAsDefaultInstance();
+  static ErrorMsg* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class User : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik.User) */ {
+ public:
+  User();
+  virtual ~User();
+
+  User(const User& from);
+
+  inline User& operator=(const User& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const User& default_instance();
+
+  void Swap(User* other);
+
+  // implements Message ----------------------------------------------
+
+  inline User* New() const { return New(NULL); }
+
+  User* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const User& from);
+  void MergeFrom(const User& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(User* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef User_Sex Sex;
+  static const Sex man =
+    User_Sex_man;
+  static const Sex woman =
+    User_Sex_woman;
+  static inline bool Sex_IsValid(int value) {
+    return User_Sex_IsValid(value);
+  }
+  static const Sex Sex_MIN =
+    User_Sex_Sex_MIN;
+  static const Sex Sex_MAX =
+    User_Sex_Sex_MAX;
+  static const int Sex_ARRAYSIZE =
+    User_Sex_Sex_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Sex_descriptor() {
+    return User_Sex_descriptor();
+  }
+  static inline const ::std::string& Sex_Name(Sex value) {
+    return User_Sex_Name(value);
+  }
+  static inline bool Sex_Parse(const ::std::string& name,
+      Sex* value) {
+    return User_Sex_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  void set_name(const char* value);
+  void set_name(const void* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // optional uint32 age = 2;
+  void clear_age();
+  static const int kAgeFieldNumber = 2;
+  ::google::protobuf::uint32 age() const;
+  void set_age(::google::protobuf::uint32 value);
+
+  // optional .ik.User.Sex sex = 3;
+  void clear_sex();
+  static const int kSexFieldNumber = 3;
+  ::ik::User_Sex sex() const;
+  void set_sex(::ik::User_Sex value);
+
+  // @@protoc_insertion_point(class_scope:ik.User)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::uint32 age_;
+  int sex_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_test_2eproto();
+  friend void protobuf_AssignDesc_test_2eproto();
+  friend void protobuf_ShutdownFile_test_2eproto();
+
+  void InitAsDefaultInstance();
+  static User* default_instance_;
+};
+// -------------------------------------------------------------------
 
 class LoginRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik.LoginRequest) */ {
  public:
@@ -200,26 +447,18 @@ class LoginResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // optional int32 error = 1;
+  // optional .ik.ErrorMsg error = 1;
+  bool has_error() const;
   void clear_error();
   static const int kErrorFieldNumber = 1;
-  ::google::protobuf::int32 error() const;
-  void set_error(::google::protobuf::int32 value);
+  const ::ik::ErrorMsg& error() const;
+  ::ik::ErrorMsg* mutable_error();
+  ::ik::ErrorMsg* release_error();
+  void set_allocated_error(::ik::ErrorMsg* error);
 
-  // optional string error_msg = 2;
-  void clear_error_msg();
-  static const int kErrorMsgFieldNumber = 2;
-  const ::std::string& error_msg() const;
-  void set_error_msg(const ::std::string& value);
-  void set_error_msg(const char* value);
-  void set_error_msg(const char* value, size_t size);
-  ::std::string* mutable_error_msg();
-  ::std::string* release_error_msg();
-  void set_allocated_error_msg(::std::string* error_msg);
-
-  // optional bool success = 3;
+  // optional bool success = 2;
   void clear_success();
-  static const int kSuccessFieldNumber = 3;
+  static const int kSuccessFieldNumber = 2;
   bool success() const;
   void set_success(bool value);
 
@@ -228,8 +467,7 @@ class LoginResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr error_msg_;
-  ::google::protobuf::int32 error_;
+  ::ik::ErrorMsg* error_;
   bool success_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_test_2eproto();
@@ -239,12 +477,330 @@ class LoginResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
   void InitAsDefaultInstance();
   static LoginResponse* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class GetFriendListRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik.GetFriendListRequest) */ {
+ public:
+  GetFriendListRequest();
+  virtual ~GetFriendListRequest();
+
+  GetFriendListRequest(const GetFriendListRequest& from);
+
+  inline GetFriendListRequest& operator=(const GetFriendListRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetFriendListRequest& default_instance();
+
+  void Swap(GetFriendListRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline GetFriendListRequest* New() const { return New(NULL); }
+
+  GetFriendListRequest* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const GetFriendListRequest& from);
+  void MergeFrom(const GetFriendListRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(GetFriendListRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 userid = 1;
+  void clear_userid();
+  static const int kUseridFieldNumber = 1;
+  ::google::protobuf::uint32 userid() const;
+  void set_userid(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:ik.GetFriendListRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::google::protobuf::uint32 userid_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_test_2eproto();
+  friend void protobuf_AssignDesc_test_2eproto();
+  friend void protobuf_ShutdownFile_test_2eproto();
+
+  void InitAsDefaultInstance();
+  static GetFriendListRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class GetFriendListResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik.GetFriendListResponse) */ {
+ public:
+  GetFriendListResponse();
+  virtual ~GetFriendListResponse();
+
+  GetFriendListResponse(const GetFriendListResponse& from);
+
+  inline GetFriendListResponse& operator=(const GetFriendListResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetFriendListResponse& default_instance();
+
+  void Swap(GetFriendListResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline GetFriendListResponse* New() const { return New(NULL); }
+
+  GetFriendListResponse* New(::google::protobuf::Arena* arena) const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const GetFriendListResponse& from);
+  void MergeFrom(const GetFriendListResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(GetFriendListResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return _internal_metadata_.arena();
+  }
+  inline void* MaybeArenaPtr() const {
+    return _internal_metadata_.raw_arena_ptr();
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .ik.ErrorMsg error = 1;
+  bool has_error() const;
+  void clear_error();
+  static const int kErrorFieldNumber = 1;
+  const ::ik::ErrorMsg& error() const;
+  ::ik::ErrorMsg* mutable_error();
+  ::ik::ErrorMsg* release_error();
+  void set_allocated_error(::ik::ErrorMsg* error);
+
+  // repeated .ik.User friendlists = 2;
+  int friendlists_size() const;
+  void clear_friendlists();
+  static const int kFriendlistsFieldNumber = 2;
+  const ::ik::User& friendlists(int index) const;
+  ::ik::User* mutable_friendlists(int index);
+  ::ik::User* add_friendlists();
+  ::google::protobuf::RepeatedPtrField< ::ik::User >*
+      mutable_friendlists();
+  const ::google::protobuf::RepeatedPtrField< ::ik::User >&
+      friendlists() const;
+
+  // @@protoc_insertion_point(class_scope:ik.GetFriendListResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool _is_default_instance_;
+  ::ik::ErrorMsg* error_;
+  ::google::protobuf::RepeatedPtrField< ::ik::User > friendlists_;
+  mutable int _cached_size_;
+  friend void  protobuf_AddDesc_test_2eproto();
+  friend void protobuf_AssignDesc_test_2eproto();
+  friend void protobuf_ShutdownFile_test_2eproto();
+
+  void InitAsDefaultInstance();
+  static GetFriendListResponse* default_instance_;
+};
 // ===================================================================
 
 
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
+// ErrorMsg
+
+// optional int32 error = 1;
+inline void ErrorMsg::clear_error() {
+  error_ = 0;
+}
+inline ::google::protobuf::int32 ErrorMsg::error() const {
+  // @@protoc_insertion_point(field_get:ik.ErrorMsg.error)
+  return error_;
+}
+inline void ErrorMsg::set_error(::google::protobuf::int32 value) {
+  
+  error_ = value;
+  // @@protoc_insertion_point(field_set:ik.ErrorMsg.error)
+}
+
+// optional bytes error_msg = 2;
+inline void ErrorMsg::clear_error_msg() {
+  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ErrorMsg::error_msg() const {
+  // @@protoc_insertion_point(field_get:ik.ErrorMsg.error_msg)
+  return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ErrorMsg::set_error_msg(const ::std::string& value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik.ErrorMsg.error_msg)
+}
+inline void ErrorMsg::set_error_msg(const char* value) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik.ErrorMsg.error_msg)
+}
+inline void ErrorMsg::set_error_msg(const void* value, size_t size) {
+  
+  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ik.ErrorMsg.error_msg)
+}
+inline ::std::string* ErrorMsg::mutable_error_msg() {
+  
+  // @@protoc_insertion_point(field_mutable:ik.ErrorMsg.error_msg)
+  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ErrorMsg::release_error_msg() {
+  // @@protoc_insertion_point(field_release:ik.ErrorMsg.error_msg)
+  
+  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ErrorMsg::set_allocated_error_msg(::std::string* error_msg) {
+  if (error_msg != NULL) {
+    
+  } else {
+    
+  }
+  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
+  // @@protoc_insertion_point(field_set_allocated:ik.ErrorMsg.error_msg)
+}
+
+// -------------------------------------------------------------------
+
+// User
+
+// optional bytes name = 1;
+inline void User::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& User::name() const {
+  // @@protoc_insertion_point(field_get:ik.User.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void User::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik.User.name)
+}
+inline void User::set_name(const char* value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik.User.name)
+}
+inline void User::set_name(const void* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ik.User.name)
+}
+inline ::std::string* User::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:ik.User.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* User::release_name() {
+  // @@protoc_insertion_point(field_release:ik.User.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void User::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:ik.User.name)
+}
+
+// optional uint32 age = 2;
+inline void User::clear_age() {
+  age_ = 0u;
+}
+inline ::google::protobuf::uint32 User::age() const {
+  // @@protoc_insertion_point(field_get:ik.User.age)
+  return age_;
+}
+inline void User::set_age(::google::protobuf::uint32 value) {
+  
+  age_ = value;
+  // @@protoc_insertion_point(field_set:ik.User.age)
+}
+
+// optional .ik.User.Sex sex = 3;
+inline void User::clear_sex() {
+  sex_ = 0;
+}
+inline ::ik::User_Sex User::sex() const {
+  // @@protoc_insertion_point(field_get:ik.User.sex)
+  return static_cast< ::ik::User_Sex >(sex_);
+}
+inline void User::set_sex(::ik::User_Sex value) {
+  
+  sex_ = value;
+  // @@protoc_insertion_point(field_set:ik.User.sex)
+}
+
+// -------------------------------------------------------------------
+
 // LoginRequest
 
 // optional string name = 1;
@@ -339,65 +895,45 @@ inline void LoginRequest::set_allocated_password(::std::string* password) {
 
 // LoginResponse
 
-// optional int32 error = 1;
-inline void LoginResponse::clear_error() {
-  error_ = 0;
+// optional .ik.ErrorMsg error = 1;
+inline bool LoginResponse::has_error() const {
+  return !_is_default_instance_ && error_ != NULL;
 }
-inline ::google::protobuf::int32 LoginResponse::error() const {
+inline void LoginResponse::clear_error() {
+  if (GetArenaNoVirtual() == NULL && error_ != NULL) delete error_;
+  error_ = NULL;
+}
+inline const ::ik::ErrorMsg& LoginResponse::error() const {
   // @@protoc_insertion_point(field_get:ik.LoginResponse.error)
+  return error_ != NULL ? *error_ : *default_instance_->error_;
+}
+inline ::ik::ErrorMsg* LoginResponse::mutable_error() {
+  
+  if (error_ == NULL) {
+    error_ = new ::ik::ErrorMsg;
+  }
+  // @@protoc_insertion_point(field_mutable:ik.LoginResponse.error)
   return error_;
 }
-inline void LoginResponse::set_error(::google::protobuf::int32 value) {
+inline ::ik::ErrorMsg* LoginResponse::release_error() {
+  // @@protoc_insertion_point(field_release:ik.LoginResponse.error)
   
-  error_ = value;
-  // @@protoc_insertion_point(field_set:ik.LoginResponse.error)
+  ::ik::ErrorMsg* temp = error_;
+  error_ = NULL;
+  return temp;
 }
-
-// optional string error_msg = 2;
-inline void LoginResponse::clear_error_msg() {
-  error_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& LoginResponse::error_msg() const {
-  // @@protoc_insertion_point(field_get:ik.LoginResponse.error_msg)
-  return error_msg_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void LoginResponse::set_error_msg(const ::std::string& value) {
-  
-  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:ik.LoginResponse.error_msg)
-}
-inline void LoginResponse::set_error_msg(const char* value) {
-  
-  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:ik.LoginResponse.error_msg)
-}
-inline void LoginResponse::set_error_msg(const char* value, size_t size) {
-  
-  error_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:ik.LoginResponse.error_msg)
-}
-inline ::std::string* LoginResponse::mutable_error_msg() {
-  
-  // @@protoc_insertion_point(field_mutable:ik.LoginResponse.error_msg)
-  return error_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* LoginResponse::release_error_msg() {
-  // @@protoc_insertion_point(field_release:ik.LoginResponse.error_msg)
-  
-  return error_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void LoginResponse::set_allocated_error_msg(::std::string* error_msg) {
-  if (error_msg != NULL) {
+inline void LoginResponse::set_allocated_error(::ik::ErrorMsg* error) {
+  delete error_;
+  error_ = error;
+  if (error) {
     
   } else {
     
   }
-  error_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error_msg);
-  // @@protoc_insertion_point(field_set_allocated:ik.LoginResponse.error_msg)
+  // @@protoc_insertion_point(field_set_allocated:ik.LoginResponse.error)
 }
 
-// optional bool success = 3;
+// optional bool success = 2;
 inline void LoginResponse::clear_success() {
   success_ = false;
 }
@@ -411,13 +947,125 @@ inline void LoginResponse::set_success(bool value) {
   // @@protoc_insertion_point(field_set:ik.LoginResponse.success)
 }
 
+// -------------------------------------------------------------------
+
+// GetFriendListRequest
+
+// optional uint32 userid = 1;
+inline void GetFriendListRequest::clear_userid() {
+  userid_ = 0u;
+}
+inline ::google::protobuf::uint32 GetFriendListRequest::userid() const {
+  // @@protoc_insertion_point(field_get:ik.GetFriendListRequest.userid)
+  return userid_;
+}
+inline void GetFriendListRequest::set_userid(::google::protobuf::uint32 value) {
+  
+  userid_ = value;
+  // @@protoc_insertion_point(field_set:ik.GetFriendListRequest.userid)
+}
+
+// -------------------------------------------------------------------
+
+// GetFriendListResponse
+
+// optional .ik.ErrorMsg error = 1;
+inline bool GetFriendListResponse::has_error() const {
+  return !_is_default_instance_ && error_ != NULL;
+}
+inline void GetFriendListResponse::clear_error() {
+  if (GetArenaNoVirtual() == NULL && error_ != NULL) delete error_;
+  error_ = NULL;
+}
+inline const ::ik::ErrorMsg& GetFriendListResponse::error() const {
+  // @@protoc_insertion_point(field_get:ik.GetFriendListResponse.error)
+  return error_ != NULL ? *error_ : *default_instance_->error_;
+}
+inline ::ik::ErrorMsg* GetFriendListResponse::mutable_error() {
+  
+  if (error_ == NULL) {
+    error_ = new ::ik::ErrorMsg;
+  }
+  // @@protoc_insertion_point(field_mutable:ik.GetFriendListResponse.error)
+  return error_;
+}
+inline ::ik::ErrorMsg* GetFriendListResponse::release_error() {
+  // @@protoc_insertion_point(field_release:ik.GetFriendListResponse.error)
+  
+  ::ik::ErrorMsg* temp = error_;
+  error_ = NULL;
+  return temp;
+}
+inline void GetFriendListResponse::set_allocated_error(::ik::ErrorMsg* error) {
+  delete error_;
+  error_ = error;
+  if (error) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:ik.GetFriendListResponse.error)
+}
+
+// repeated .ik.User friendlists = 2;
+inline int GetFriendListResponse::friendlists_size() const {
+  return friendlists_.size();
+}
+inline void GetFriendListResponse::clear_friendlists() {
+  friendlists_.Clear();
+}
+inline const ::ik::User& GetFriendListResponse::friendlists(int index) const {
+  // @@protoc_insertion_point(field_get:ik.GetFriendListResponse.friendlists)
+  return friendlists_.Get(index);
+}
+inline ::ik::User* GetFriendListResponse::mutable_friendlists(int index) {
+  // @@protoc_insertion_point(field_mutable:ik.GetFriendListResponse.friendlists)
+  return friendlists_.Mutable(index);
+}
+inline ::ik::User* GetFriendListResponse::add_friendlists() {
+  // @@protoc_insertion_point(field_add:ik.GetFriendListResponse.friendlists)
+  return friendlists_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::ik::User >*
+GetFriendListResponse::mutable_friendlists() {
+  // @@protoc_insertion_point(field_mutable_list:ik.GetFriendListResponse.friendlists)
+  return &friendlists_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::ik::User >&
+GetFriendListResponse::friendlists() const {
+  // @@protoc_insertion_point(field_list:ik.GetFriendListResponse.friendlists)
+  return friendlists_;
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace ik
+
+#ifndef SWIG
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::ik::User_Sex> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ik::User_Sex>() {
+  return ::ik::User_Sex_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
+#endif  // SWIG
 
 // @@protoc_insertion_point(global_scope)
 

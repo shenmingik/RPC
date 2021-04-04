@@ -4,6 +4,25 @@ syntax = "proto3";
 //声明代码所在包(namespace)
 package ik;
 
+message ErrorMsg
+{
+    int32 error = 1;
+    bytes error_msg = 2;
+}
+
+message User
+{
+    bytes name = 1;
+    uint32 age = 2;
+    
+    enum Sex
+    {
+        man = 0;
+        woman = 1;
+    }
+    Sex sex = 3;
+}
+
 // 登录请求消息类型
 message LoginRequest
 {
@@ -14,7 +33,18 @@ message LoginRequest
 // 登录相应消息类型
 message LoginResponse
 {
-    int32 error = 1;
-    string error_msg = 2;
-    bool success = 3;
+    ErrorMsg error = 1;
+    bool success = 2;
 }
+
+message GetFriendListRequest
+{
+    uint32 userid = 1;
+}
+
+message GetFriendListResponse
+{
+    ErrorMsg error = 1;
+    repeated User friendlists = 2;
+}
+
