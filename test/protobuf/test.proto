@@ -1,0 +1,20 @@
+// 声明proto版本
+syntax = "proto3";
+
+//声明代码所在包(namespace)
+package ik;
+
+// 登录请求消息类型
+message LoginRequest
+{
+    string name = 1;    //1表示是第一个字段
+    string password = 2;
+}
+
+// 登录相应消息类型
+message LoginResponse
+{
+    int32 error = 1;
+    string error_msg = 2;
+    bool success = 3;
+}
