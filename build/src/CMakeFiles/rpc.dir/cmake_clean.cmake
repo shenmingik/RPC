@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rpc.dir/RpcApplication.cpp.o"
+  "CMakeFiles/rpc.dir/RpcConfigure.cpp.o"
   "CMakeFiles/rpc.dir/RpcProvider.cpp.o"
   "../../lib/librpc.pdb"
   "../../lib/librpc.so"

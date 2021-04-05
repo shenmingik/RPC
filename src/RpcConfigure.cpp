@@ -21,8 +21,9 @@ void RpcConfigure::load_configure(const char *config_file)
         char buf[BUFFER_SIZE] = {0};
         fgets(buf, BUFFER_SIZE, pf);
 
-        //检查空格并去掉
         string str_buf(buf);
+
+        //检查空格并去掉
         //找到第一个不为空格的字符
         int index = str_buf.find_first_not_of(' ');
         if (index != -1)
@@ -39,7 +40,7 @@ void RpcConfigure::load_configure(const char *config_file)
         }
 
         //判断# 注释 或者空行
-        if (str_buf[0] == '#' || str_buf.empty())
+        if (str_buf[0] == '#' || str_buf[0] == '\n' || str_buf.empty())
         {
             continue;
         }
@@ -55,7 +56,7 @@ void RpcConfigure::load_configure(const char *config_file)
         string key = str_buf.substr(0, index);
         string value = str_buf.substr(index + 1, str_buf.size() - index);
         configure_map_.insert({key, value});
-        cout << "key: " << key << "value: " << value << endl;
+        //cout << "key: " << key << " value: " << value << endl;
     }
 }
 

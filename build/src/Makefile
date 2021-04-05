@@ -152,6 +152,33 @@ RpcApplication.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcApplication.cpp.s
 .PHONY : RpcApplication.cpp.s
 
+RpcConfigure.o: RpcConfigure.cpp.o
+
+.PHONY : RpcConfigure.o
+
+# target to build an object file
+RpcConfigure.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
+.PHONY : RpcConfigure.cpp.o
+
+RpcConfigure.i: RpcConfigure.cpp.i
+
+.PHONY : RpcConfigure.i
+
+# target to preprocess a source file
+RpcConfigure.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcConfigure.cpp.i
+.PHONY : RpcConfigure.cpp.i
+
+RpcConfigure.s: RpcConfigure.cpp.s
+
+.PHONY : RpcConfigure.s
+
+# target to generate assembly for a file
+RpcConfigure.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcConfigure.cpp.s
+.PHONY : RpcConfigure.cpp.s
+
 RpcProvider.o: RpcProvider.cpp.o
 
 .PHONY : RpcProvider.o
@@ -191,6 +218,9 @@ help:
 	@echo "... RpcApplication.o"
 	@echo "... RpcApplication.i"
 	@echo "... RpcApplication.s"
+	@echo "... RpcConfigure.o"
+	@echo "... RpcConfigure.i"
+	@echo "... RpcConfigure.s"
 	@echo "... RpcProvider.o"
 	@echo "... RpcProvider.i"
 	@echo "... RpcProvider.s"

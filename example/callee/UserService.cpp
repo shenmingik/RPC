@@ -40,10 +40,11 @@ public:
     }
 };
 
-int main(int argc,char** argv)
+int main(int argc, char **argv)
 {
     //调用框架的初始化操作
-
+    RpcApplication::init(argc,argv);
+    
     //框架服务提供provider
 
     return 0;

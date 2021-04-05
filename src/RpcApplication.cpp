@@ -19,7 +19,7 @@ void RpcApplication::init(int argc, char **argv)
 
     int choose = 0;
     string config_file;
-    while (choose = getopt(argc, argv, "i:") != -1)
+    while ((choose = getopt(argc, argv, "i:")) != -1)
     {
         switch (choose)
         {

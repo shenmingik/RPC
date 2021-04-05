@@ -16,7 +16,7 @@ public:
 
 private:
     RpcApplication();
-    ~RpcApplication();
+    ~RpcApplication(){}
 
 private:
     RpcApplication(RpcApplication &) = delete;
