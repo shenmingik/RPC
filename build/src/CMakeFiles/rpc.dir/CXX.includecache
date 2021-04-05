@@ -7,6 +7,14 @@
 #IncludeRegexTransform: 
 
 ../src/include/RpcApplication.hpp
+RpcConfigure.hpp
+../src/include/RpcConfigure.hpp
+
+../src/include/RpcConfigure.hpp
+unordered_map
+-
+string
+-
 
 ../src/include/RpcProvider.hpp
 google/protobuf/service.h

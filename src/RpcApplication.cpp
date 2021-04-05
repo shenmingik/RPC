@@ -8,6 +8,8 @@
 using namespace muduo;
 using namespace std;
 
+RpcConfigure RpcApplication::configure_;
+
 void RpcApplication::init(int argc, char **argv)
 {
     if (argc < 2)
@@ -36,6 +38,7 @@ void RpcApplication::init(int argc, char **argv)
     }
 
     //加载配置文件
+    configure_.load_configure(config_file.c_str());
 }
 
 RpcApplication::RpcApplication()

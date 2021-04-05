@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RpcConfigure.hpp"
+
 //Rpc框架的基础类(单例)
 class RpcApplication
 {
@@ -19,4 +21,7 @@ private:
 private:
     RpcApplication(RpcApplication &) = delete;
     RpcApplication(RpcApplication &&) = delete;
+
+private:
+    static RpcConfigure configure_;
 };

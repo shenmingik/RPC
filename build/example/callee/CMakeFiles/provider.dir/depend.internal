@@ -4,4 +4,5 @@
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o
  ../example/include/User.pb.h
  ../src/include/RpcApplication.hpp
+ ../src/include/RpcConfigure.hpp
  /home/ubuntu/code/RPC/example/callee/UserService.cpp

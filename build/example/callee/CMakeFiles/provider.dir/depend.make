@@ -3,5 +3,6 @@
 
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o: ../example/include/User.pb.h
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o: ../src/include/RpcApplication.hpp
+example/callee/CMakeFiles/provider.dir/UserService.cpp.o: ../src/include/RpcConfigure.hpp
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o: ../example/callee/UserService.cpp
 
