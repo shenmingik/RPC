@@ -183,8 +183,8 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 rpc_BINARY_DIR:STATIC=/home/ubuntu/code/RPC/build
 
-//Dependencies for target
-rpc_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+rpc_LIB_DEPENDS:STATIC=general;pthread;general;muduo_base;general;muduo_net;
 
 //Value Computed by CMake
 rpc_SOURCE_DIR:STATIC=/home/ubuntu/code/RPC

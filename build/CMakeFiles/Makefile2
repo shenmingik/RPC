@@ -84,7 +84,7 @@ src/preinstall:
 src/CMakeFiles/rpc.dir/all:
 	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/depend
 	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=3,4,5,6 "Built target rpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=4,5,6,7 "Built target rpc"
 .PHONY : src/CMakeFiles/rpc.dir/all
 
 # Include target in all.
@@ -178,7 +178,7 @@ example/callee/preinstall:
 example/callee/CMakeFiles/provider.dir/all: src/CMakeFiles/rpc.dir/all
 	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/depend
 	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=1,2 "Built target provider"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=1,2,3 "Built target provider"
 .PHONY : example/callee/CMakeFiles/provider.dir/all
 
 # Include target in all.
@@ -188,7 +188,7 @@ all: example/callee/CMakeFiles/provider.dir/all
 
 # Build rule for subdir invocation for target.
 example/callee/CMakeFiles/provider.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 0
 .PHONY : example/callee/CMakeFiles/provider.dir/rule

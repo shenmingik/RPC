@@ -14,9 +14,11 @@ public:
         return instance;
     }
 
+    static RpcConfigure &get_configure() { return configure_; }
+
 private:
     RpcApplication();
-    ~RpcApplication(){}
+    ~RpcApplication() {}
 
 private:
     RpcApplication(RpcApplication &) = delete;

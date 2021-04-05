@@ -2,6 +2,7 @@
 #include <string>
 #include "User.pb.h"
 #include "RpcApplication.hpp"
+#include "RpcProvider.hpp"
 
 using namespace std;
 /*
@@ -46,6 +47,8 @@ int main(int argc, char **argv)
     RpcApplication::init(argc,argv);
     
     //框架服务提供provider
-
+    RpcProvider provide;
+    provide.notify_service(new UserService());
+    provide.run();
     return 0;
 }

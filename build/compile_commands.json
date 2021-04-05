@@ -1,22 +1,27 @@
 [
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
-  "command": "/usr/bin/g++-7  -Drpc_EXPORTS -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g -fPIC   -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp",
   "file": "/home/ubuntu/code/RPC/src/RpcApplication.cpp"
 },
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
-  "command": "/usr/bin/g++-7  -Drpc_EXPORTS -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g -fPIC   -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp",
   "file": "/home/ubuntu/code/RPC/src/RpcConfigure.cpp"
 },
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
-  "command": "/usr/bin/g++-7  -Drpc_EXPORTS -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g -fPIC   -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp",
   "file": "/home/ubuntu/code/RPC/src/RpcProvider.cpp"
 },
 {
   "directory": "/home/ubuntu/code/RPC/build/example/callee",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/provider.dir/UserService.cpp.o -c /home/ubuntu/code/RPC/example/callee/UserService.cpp",
   "file": "/home/ubuntu/code/RPC/example/callee/UserService.cpp"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/example/callee",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/provider.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc",
+  "file": "/home/ubuntu/code/RPC/example/src/User.pb.cc"
 }
 ]

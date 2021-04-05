@@ -41,18 +41,19 @@ void RpcConfigure::load_configure(const char *config_file)
 
         string key = str_buf.substr(0, index);
         trim(key);
+        
         string value = str_buf.substr(index + 1, str_buf.size() - index);
         //去除最后一个换行符'\n'
-        value[value.size() - 1] = '\0';
+        value[value.size() - 1] = ' ';
         trim(value);
 
         configure_map_.insert({key, value});
-        cout << "key: " << key << " value: " << value << endl;
+        //cout << "key: " << key << " value: " << value << endl;
     }
 }
 
 //查询配置项信息
-string RpcConfigure::find_load(string &key)
+string RpcConfigure::find_load(string key)
 {
     auto it = configure_map_.find(key);
     if (it == configure_map_.end())

@@ -152,6 +152,33 @@ UserService.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/UserService.cpp.s
 .PHONY : UserService.cpp.s
 
+__/src/User.pb.o: __/src/User.pb.cc.o
+
+.PHONY : __/src/User.pb.o
+
+# target to build an object file
+__/src/User.pb.cc.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o
+.PHONY : __/src/User.pb.cc.o
+
+__/src/User.pb.i: __/src/User.pb.cc.i
+
+.PHONY : __/src/User.pb.i
+
+# target to preprocess a source file
+__/src/User.pb.cc.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.i
+.PHONY : __/src/User.pb.cc.i
+
+__/src/User.pb.s: __/src/User.pb.cc.s
+
+.PHONY : __/src/User.pb.s
+
+# target to generate assembly for a file
+__/src/User.pb.cc.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.s
+.PHONY : __/src/User.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... UserService.o"
 	@echo "... UserService.i"
 	@echo "... UserService.s"
+	@echo "... __/src/User.pb.o"
+	@echo "... __/src/User.pb.i"
+	@echo "... __/src/User.pb.s"
 .PHONY : help
 
 
