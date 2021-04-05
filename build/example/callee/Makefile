@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles /home/ubuntu/code/RPC/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ubuntu/code/RPC/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles /home/ubuntu/code/RPC/build/example/callee/CMakeFiles/progress.marks
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/callee/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/callee/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,31 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/callee/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/callee/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/code/RPC/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named provider
+# Convenience name for target.
+example/callee/CMakeFiles/provider.dir/rule:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/rule
+.PHONY : example/callee/CMakeFiles/provider.dir/rule
 
-# Build rule for target.
-provider: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 provider
+# Convenience name for target.
+provider: example/callee/CMakeFiles/provider.dir/rule
+
 .PHONY : provider
 
 # fast build rule for target.
 provider/fast:
-	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
 .PHONY : provider/fast
+
+UserService.o: UserService.cpp.o
+
+.PHONY : UserService.o
+
+# target to build an object file
+UserService.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/UserService.cpp.o
+.PHONY : UserService.cpp.o
+
+UserService.i: UserService.cpp.i
+
+.PHONY : UserService.i
+
+# target to preprocess a source file
+UserService.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/UserService.cpp.i
+.PHONY : UserService.cpp.i
+
+UserService.s: UserService.cpp.s
+
+.PHONY : UserService.s
+
+# target to generate assembly for a file
+UserService.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/UserService.cpp.s
+.PHONY : UserService.cpp.s
 
 # Help Target
 help:
@@ -130,8 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... provider"
+	@echo "... edit_cache"
+	@echo "... UserService.o"
+	@echo "... UserService.i"
+	@echo "... UserService.s"
 .PHONY : help
 
 
@@ -143,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/code/RPC/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

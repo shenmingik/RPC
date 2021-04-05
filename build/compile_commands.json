@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ubuntu/code/RPC/build/example/callee",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/provider.dir/UserService.cpp.o -c /home/ubuntu/code/RPC/example/callee/UserService.cpp",
+  "file": "/home/ubuntu/code/RPC/example/callee/UserService.cpp"
+}
+]

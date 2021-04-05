@@ -78,6 +78,100 @@ src/preinstall:
 .PHONY : src/preinstall
 
 #=============================================================================
+# Directory level rules for directory example
+
+# Convenience name for "all" pass in the directory.
+example/all: example/src/all
+example/all: example/callee/all
+
+.PHONY : example/all
+
+# Convenience name for "clean" pass in the directory.
+example/clean: example/src/clean
+example/clean: example/callee/clean
+
+.PHONY : example/clean
+
+# Convenience name for "preinstall" pass in the directory.
+example/preinstall: example/src/preinstall
+example/preinstall: example/callee/preinstall
+
+.PHONY : example/preinstall
+
+#=============================================================================
+# Directory level rules for directory example/src
+
+# Convenience name for "all" pass in the directory.
+example/src/all:
+
+.PHONY : example/src/all
+
+# Convenience name for "clean" pass in the directory.
+example/src/clean:
+
+.PHONY : example/src/clean
+
+# Convenience name for "preinstall" pass in the directory.
+example/src/preinstall:
+
+.PHONY : example/src/preinstall
+
+#=============================================================================
+# Directory level rules for directory example/callee
+
+# Convenience name for "all" pass in the directory.
+example/callee/all: example/callee/CMakeFiles/provider.dir/all
+
+.PHONY : example/callee/all
+
+# Convenience name for "clean" pass in the directory.
+example/callee/clean: example/callee/CMakeFiles/provider.dir/clean
+
+.PHONY : example/callee/clean
+
+# Convenience name for "preinstall" pass in the directory.
+example/callee/preinstall:
+
+.PHONY : example/callee/preinstall
+
+#=============================================================================
+# Target rules for target example/callee/CMakeFiles/provider.dir
+
+# All Build rule for target.
+example/callee/CMakeFiles/provider.dir/all:
+	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/depend
+	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=1,2 "Built target provider"
+.PHONY : example/callee/CMakeFiles/provider.dir/all
+
+# Include target in all.
+all: example/callee/CMakeFiles/provider.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+example/callee/CMakeFiles/provider.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 0
+.PHONY : example/callee/CMakeFiles/provider.dir/rule
+
+# Convenience name for target.
+provider: example/callee/CMakeFiles/provider.dir/rule
+
+.PHONY : provider
+
+# clean rule for target.
+example/callee/CMakeFiles/provider.dir/clean:
+	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/clean
+.PHONY : example/callee/CMakeFiles/provider.dir/clean
+
+# clean rule for target.
+clean: example/callee/CMakeFiles/provider.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

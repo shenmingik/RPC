@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -g -g  -rdynamic CMakeFiles/provider.dir/UserService.cpp.o  -o ../../../bin/provider  -L/home/ubuntu/code/RPC/thirdlib 

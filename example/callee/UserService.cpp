@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "User.pb.h"
+#include "RpcApplication.hpp"
 
 using namespace std;
 /*
@@ -39,8 +40,11 @@ public:
     }
 };
 
-int main()
+int main(int argc,char** argv)
 {
+    //调用框架的初始化操作
+
+    //框架服务提供provider
 
     return 0;
 }
