@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package ik;
+
+// 在protobuf中定义描述rpc方法发类型-service
+message Map
+{
+    map<int32,string> test = 3;
+}
+

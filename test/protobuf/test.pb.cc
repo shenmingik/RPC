@@ -40,6 +40,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* GetFriendListResponse_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GetFriendListResponse_reflection_ = NULL;
+const ::google::protobuf::ServiceDescriptor* UserServiceRpc_descriptor_ = NULL;
 
 }  // namespace
 
@@ -148,6 +149,7 @@ void protobuf_AssignDesc_test_2eproto() {
       sizeof(GetFriendListResponse),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetFriendListResponse, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetFriendListResponse, _is_default_instance_));
+  UserServiceRpc_descriptor_ = file->service(0);
 }
 
 namespace {
@@ -209,7 +211,11 @@ void protobuf_AddDesc_test_2eproto() {
     "orMsg\022\017\n\007success\030\002 \001(\010\"&\n\024GetFriendListR"
     "equest\022\016\n\006userid\030\001 \001(\r\"S\n\025GetFriendListR"
     "esponse\022\033\n\005error\030\001 \001(\0132\014.ik.ErrorMsg\022\035\n\013"
-    "friendlists\030\002 \003(\0132\010.ik.Userb\006proto3", 395);
+    "friendlists\030\002 \003(\0132\010.ik.User2\204\001\n\016UserServ"
+    "iceRpc\022,\n\005Login\022\020.ik.LoginRequest\032\021.ik.L"
+    "oginResponse\022D\n\rGetFriendList\022\030.ik.GetFr"
+    "iendListRequest\032\031.ik.GetFriendListRespon"
+    "seB\003\200\001\001b\006proto3", 535);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "test.proto", &protobuf_RegisterTypes);
   ErrorMsg::default_instance_ = new ErrorMsg();
@@ -2253,6 +2259,117 @@ GetFriendListResponse::friendlists() const {
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+UserServiceRpc::~UserServiceRpc() {}
+
+const ::google::protobuf::ServiceDescriptor* UserServiceRpc::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UserServiceRpc_descriptor_;
+}
+
+const ::google::protobuf::ServiceDescriptor* UserServiceRpc::GetDescriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UserServiceRpc_descriptor_;
+}
+
+void UserServiceRpc::Login(::google::protobuf::RpcController* controller,
+                         const ::ik::LoginRequest*,
+                         ::ik::LoginResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method Login() not implemented.");
+  done->Run();
+}
+
+void UserServiceRpc::GetFriendList(::google::protobuf::RpcController* controller,
+                         const ::ik::GetFriendListRequest*,
+                         ::ik::GetFriendListResponse*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method GetFriendList() not implemented.");
+  done->Run();
+}
+
+void UserServiceRpc::CallMethod(const ::google::protobuf::MethodDescriptor* method,
+                             ::google::protobuf::RpcController* controller,
+                             const ::google::protobuf::Message* request,
+                             ::google::protobuf::Message* response,
+                             ::google::protobuf::Closure* done) {
+  GOOGLE_DCHECK_EQ(method->service(), UserServiceRpc_descriptor_);
+  switch(method->index()) {
+    case 0:
+      Login(controller,
+             ::google::protobuf::down_cast<const ::ik::LoginRequest*>(request),
+             ::google::protobuf::down_cast< ::ik::LoginResponse*>(response),
+             done);
+      break;
+    case 1:
+      GetFriendList(controller,
+             ::google::protobuf::down_cast<const ::ik::GetFriendListRequest*>(request),
+             ::google::protobuf::down_cast< ::ik::GetFriendListResponse*>(response),
+             done);
+      break;
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      break;
+  }
+}
+
+const ::google::protobuf::Message& UserServiceRpc::GetRequestPrototype(
+    const ::google::protobuf::MethodDescriptor* method) const {
+  GOOGLE_DCHECK_EQ(method->service(), descriptor());
+  switch(method->index()) {
+    case 0:
+      return ::ik::LoginRequest::default_instance();
+    case 1:
+      return ::ik::GetFriendListRequest::default_instance();
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      return *::google::protobuf::MessageFactory::generated_factory()
+          ->GetPrototype(method->input_type());
+  }
+}
+
+const ::google::protobuf::Message& UserServiceRpc::GetResponsePrototype(
+    const ::google::protobuf::MethodDescriptor* method) const {
+  GOOGLE_DCHECK_EQ(method->service(), descriptor());
+  switch(method->index()) {
+    case 0:
+      return ::ik::LoginResponse::default_instance();
+    case 1:
+      return ::ik::GetFriendListResponse::default_instance();
+    default:
+      GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
+      return *::google::protobuf::MessageFactory::generated_factory()
+          ->GetPrototype(method->output_type());
+  }
+}
+
+UserServiceRpc_Stub::UserServiceRpc_Stub(::google::protobuf::RpcChannel* channel)
+  : channel_(channel), owns_channel_(false) {}
+UserServiceRpc_Stub::UserServiceRpc_Stub(
+    ::google::protobuf::RpcChannel* channel,
+    ::google::protobuf::Service::ChannelOwnership ownership)
+  : channel_(channel),
+    owns_channel_(ownership == ::google::protobuf::Service::STUB_OWNS_CHANNEL) {}
+UserServiceRpc_Stub::~UserServiceRpc_Stub() {
+  if (owns_channel_) delete channel_;
+}
+
+void UserServiceRpc_Stub::Login(::google::protobuf::RpcController* controller,
+                              const ::ik::LoginRequest* request,
+                              ::ik::LoginResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(0),
+                       controller, request, response, done);
+}
+void UserServiceRpc_Stub::GetFriendList(::google::protobuf::RpcController* controller,
+                              const ::ik::GetFriendListRequest* request,
+                              ::ik::GetFriendListResponse* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(1),
+                       controller, request, response, done);
+}
 
 // @@protoc_insertion_point(namespace_scope)
 

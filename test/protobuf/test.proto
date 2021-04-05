@@ -4,12 +4,16 @@ syntax = "proto3";
 //声明代码所在包(namespace)
 package ik;
 
+// 定义下面的选项，表示生成service服务类和rpc方法描述，默认不生成
+option cc_generic_services = true;
+
 message ErrorMsg
 {
     int32 error = 1;
     bytes error_msg = 2;
 }
 
+// ==> class User:public google::protobuf::Message
 message User
 {
     bytes name = 1;
@@ -48,3 +52,10 @@ message GetFriendListResponse
     repeated User friendlists = 2;
 }
 
+// ==>class UserServiceRpc:public: google::protobuf::Service
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns(LoginResponse);  //login方法接受一个loginrequest的形参返回一个loginresponse的返回值
+    rpc GetFriendList(GetFriendListRequest) returns(GetFriendListResponse);
+
+}
