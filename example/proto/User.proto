@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ik;
+
+option cc_generic_services = true;
+
+message ErrorMsg
+{
+    int32 error = 1;
+    bytes error_msg = 2;
+}
+
+message LoginRequest
+{
+    bytes name = 1;
+    bytes password = 2;
+}
+
+message LoginResponse
+{
+    ErrorMsg errmsg = 1;
+    bool success = 2;
+}
+
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns(LoginResponse);
+}
