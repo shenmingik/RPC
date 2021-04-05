@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rpc
+
+# Build rule for target.
+rpc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rpc
+.PHONY : rpc
+
+# fast build rule for target.
+rpc/fast:
+	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
+.PHONY : rpc/fast
+
+#=============================================================================
 # Target rules for targets named provider
 
 # Build rule for target.
@@ -131,6 +144,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rpc"
 	@echo "... provider"
 .PHONY : help
 

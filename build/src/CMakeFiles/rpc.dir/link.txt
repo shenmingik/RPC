@@ -1,0 +1,1 @@
+/usr/bin/g++-7 -fPIC -g -g  -shared -Wl,-soname,librpc.so -o ../../lib/librpc.so CMakeFiles/rpc.dir/RpcApplication.cpp.o CMakeFiles/rpc.dir/RpcProvider.cpp.o  -L/home/ubuntu/code/RPC/thirdlib 

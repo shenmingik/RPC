@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/RpcApplication.hpp
+
+../src/include/RpcProvider.hpp
+google/protobuf/service.h
+-
+
+/home/ubuntu/code/RPC/src/RpcApplication.cpp
+RpcApplication.hpp
+/home/ubuntu/code/RPC/src/RpcApplication.hpp
+
+/home/ubuntu/code/RPC/src/RpcProvider.cpp
+RpcProvider.hpp
+/home/ubuntu/code/RPC/src/RpcProvider.hpp
+

@@ -63,12 +63,12 @@ CMAKE_BINARY_DIR = /home/ubuntu/code/RPC/build
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all:
+src/all: src/CMakeFiles/rpc.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean:
+src/clean: src/CMakeFiles/rpc.dir/clean
 
 .PHONY : src/clean
 
@@ -76,6 +76,43 @@ src/clean:
 src/preinstall:
 
 .PHONY : src/preinstall
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/rpc.dir
+
+# All Build rule for target.
+src/CMakeFiles/rpc.dir/all:
+	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/depend
+	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=3,4,5 "Built target rpc"
+.PHONY : src/CMakeFiles/rpc.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/rpc.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/rpc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/rpc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/rpc.dir/rule
+
+# Convenience name for target.
+rpc: src/CMakeFiles/rpc.dir/rule
+
+.PHONY : rpc
+
+# clean rule for target.
+src/CMakeFiles/rpc.dir/clean:
+	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/clean
+.PHONY : src/CMakeFiles/rpc.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/rpc.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory example
@@ -138,7 +175,7 @@ example/callee/preinstall:
 # Target rules for target example/callee/CMakeFiles/provider.dir
 
 # All Build rule for target.
-example/callee/CMakeFiles/provider.dir/all:
+example/callee/CMakeFiles/provider.dir/all: src/CMakeFiles/rpc.dir/all
 	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/depend
 	$(MAKE) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=1,2 "Built target provider"
@@ -151,7 +188,7 @@ all: example/callee/CMakeFiles/provider.dir/all
 
 # Build rule for subdir invocation for target.
 example/callee/CMakeFiles/provider.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/code/RPC/build/CMakeFiles 0
 .PHONY : example/callee/CMakeFiles/provider.dir/rule

@@ -110,6 +110,75 @@ depend:
 	cd /home/ubuntu/code/RPC/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/CMakeFiles/rpc.dir/rule:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/rpc.dir/rule
+.PHONY : src/CMakeFiles/rpc.dir/rule
+
+# Convenience name for target.
+rpc: src/CMakeFiles/rpc.dir/rule
+
+.PHONY : rpc
+
+# fast build rule for target.
+rpc/fast:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
+.PHONY : rpc/fast
+
+RpcApplication.o: RpcApplication.cpp.o
+
+.PHONY : RpcApplication.o
+
+# target to build an object file
+RpcApplication.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcApplication.cpp.o
+.PHONY : RpcApplication.cpp.o
+
+RpcApplication.i: RpcApplication.cpp.i
+
+.PHONY : RpcApplication.i
+
+# target to preprocess a source file
+RpcApplication.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcApplication.cpp.i
+.PHONY : RpcApplication.cpp.i
+
+RpcApplication.s: RpcApplication.cpp.s
+
+.PHONY : RpcApplication.s
+
+# target to generate assembly for a file
+RpcApplication.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcApplication.cpp.s
+.PHONY : RpcApplication.cpp.s
+
+RpcProvider.o: RpcProvider.cpp.o
+
+.PHONY : RpcProvider.o
+
+# target to build an object file
+RpcProvider.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
+.PHONY : RpcProvider.cpp.o
+
+RpcProvider.i: RpcProvider.cpp.i
+
+.PHONY : RpcProvider.i
+
+# target to preprocess a source file
+RpcProvider.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcProvider.cpp.i
+.PHONY : RpcProvider.cpp.i
+
+RpcProvider.s: RpcProvider.cpp.s
+
+.PHONY : RpcProvider.s
+
+# target to generate assembly for a file
+RpcProvider.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcProvider.cpp.s
+.PHONY : RpcProvider.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -117,7 +186,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... rpc"
 	@echo "... edit_cache"
+	@echo "... RpcApplication.o"
+	@echo "... RpcApplication.i"
+	@echo "... RpcApplication.s"
+	@echo "... RpcProvider.o"
+	@echo "... RpcProvider.i"
+	@echo "... RpcProvider.s"
 .PHONY : help
 
 

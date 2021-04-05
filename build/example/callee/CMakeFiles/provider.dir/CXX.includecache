@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../example/include/User.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/service.h
+-
+google/protobuf/unknown_field_set.h
+-
+
+../src/include/RpcApplication.hpp
+
+/home/ubuntu/code/RPC/example/callee/UserService.cpp
+iostream
+-
+string
+-
+User.pb.h
+/home/ubuntu/code/RPC/example/callee/User.pb.h
+RpcApplication.hpp
+/home/ubuntu/code/RPC/example/callee/RpcApplication.hpp
+

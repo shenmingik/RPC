@@ -90,6 +90,7 @@ provider_EXTERNAL_OBJECTS =
 
 ../bin/provider: example/callee/CMakeFiles/provider.dir/UserService.cpp.o
 ../bin/provider: example/callee/CMakeFiles/provider.dir/build.make
+../bin/provider: ../lib/librpc.so
 ../bin/provider: example/callee/CMakeFiles/provider.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/provider"
 	cd /home/ubuntu/code/RPC/build/example/callee && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/provider.dir/link.txt --verbose=$(VERBOSE)
