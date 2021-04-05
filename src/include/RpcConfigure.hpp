@@ -17,6 +17,9 @@ public:
     //查询配置项信息
     string find_load(string &key);
 
+    //去掉字符串前后的空格
+    void trim(string &str_buf);
+
 private:
     unordered_map<string, string> configure_map_;
 };
