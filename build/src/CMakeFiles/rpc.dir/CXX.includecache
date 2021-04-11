@@ -16,6 +16,28 @@ unordered_map
 string
 -
 
+../src/include/RpcHeader.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+
 ../src/include/RpcProvider.hpp
 google/protobuf/service.h
 -
@@ -69,4 +91,6 @@ RpcProvider.hpp
 /home/ubuntu/code/RPC/src/RpcProvider.hpp
 RpcApplication.hpp
 /home/ubuntu/code/RPC/src/RpcApplication.hpp
+RpcHeader.pb.h
+/home/ubuntu/code/RPC/src/RpcHeader.pb.h
 

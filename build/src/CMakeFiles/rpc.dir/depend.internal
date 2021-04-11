@@ -11,5 +11,6 @@ src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
  ../src/include/RpcApplication.hpp
  ../src/include/RpcConfigure.hpp
+ ../src/include/RpcHeader.pb.h
  ../src/include/RpcProvider.hpp
  /home/ubuntu/code/RPC/src/RpcProvider.cpp

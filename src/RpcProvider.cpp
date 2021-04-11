@@ -1,5 +1,6 @@
 #include "RpcProvider.hpp"
 #include "RpcApplication.hpp"
+#include "RpcHeader.pb.h"
 
 using namespace std;
 using namespace placeholders;
@@ -69,8 +70,23 @@ void RpcProvider::on_connection(const TcpConnectionPtr &conn)
     }
 }
 
+/*
+    在框架内部，RpcPrivoder和RpcConsumer协商好之间通信用的protobuf类型
+标识长度：header_size
+    service_name ==> service
+    method_name ==> method
+-->16UserServiceLogin
+
+定义proto的message类型：
+    args
+
+
+--> header_size（4字节）+ header_str + args_str
+*/
+
 //已建立连接的读写事件回调
 void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Timestamp stamp)
 {
-    
+    // 网络上接受的远程rpc调用请求的字符流
+    string recv_buf = buffer->retrieveAllAsString();
 }

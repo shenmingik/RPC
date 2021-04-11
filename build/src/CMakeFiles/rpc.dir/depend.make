@@ -10,6 +10,7 @@ src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: ../src/RpcConfigure.cpp
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcApplication.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcConfigure.hpp
+src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcHeader.pb.h
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcProvider.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
 
