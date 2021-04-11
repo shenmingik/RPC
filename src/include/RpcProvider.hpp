@@ -1,5 +1,6 @@
 #pragma once
 #include <google/protobuf/service.h>
+#include <google/protobuf/descriptor.h>
 #include <muduo/net/TcpServer.h>
 #include <muduo/net/EventLoop.h>
 #include <muduo/net/InetAddress.h>
@@ -7,7 +8,10 @@
 #include <muduo/net/Buffer.h>
 #include <muduo/base/Timestamp.h>
 
-#include <memory>
+#include <unordered_map>
+#include <string>
+#include <iostream>
+#include <functional>
 
 using namespace muduo::net;
 using namespace muduo;
@@ -25,13 +29,24 @@ public:
 
 private:
     //新socket连接的回调
-    void on_connection(const TcpConnectionPtr& conn);
+    void on_connection(const TcpConnectionPtr &conn);
 
     //已建立连接的读写事件回调
-    void on_message(const TcpConnectionPtr& conn,Buffer* buffer,Timestamp stamp);
+    void on_message(const TcpConnectionPtr &conn, Buffer *buffer, Timestamp stamp);
+
 private:
-    //unique_ptr<TcpServer> serverPtr_;
+    //服务类型信息
+    struct ServiceInfo
+    {
+        //保存服务对象
+        google::protobuf::Service *service_;
+        //保存服务方法：    <服务名，指向方法指针>
+        unordered_map<string, const google::protobuf::MethodDescriptor *> method_map_;
+    };
 
+private:
+    /*unique_ptr<TcpServer> serverPtr_;*/
     EventLoop eventloop_;
-
+    //存储服务信息
+    unordered_map<string, ServiceInfo> service_map_;
 };

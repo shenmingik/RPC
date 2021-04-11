@@ -36,7 +36,6 @@ void RpcApplication::init(int argc, char **argv)
             break;
         }
     }
-
     //加载配置文件
     configure_.load_configure(config_file.c_str());
 }
