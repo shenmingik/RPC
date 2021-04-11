@@ -62,9 +62,15 @@ void RpcProvider::run()
 //新socket连接的回调
 void RpcProvider::on_connection(const TcpConnectionPtr &conn)
 {
+    if(!conn->connected())
+    {
+        //和rpc client断开连接
+        conn->shutdown();
+    }
 }
 
 //已建立连接的读写事件回调
 void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Timestamp stamp)
 {
+    
 }
