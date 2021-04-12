@@ -57,9 +57,9 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
 
     //组织待发送的rpc请求的字符串
     string send_rpc_str;
-    send_rpc_str.insert(0, string((char *)&header_size)); //header_size
-    send_rpc_str += rpc_header_str;                       //rpc_header
-    send_rpc_str += args_str;                             //args_str
+    send_rpc_str.insert(0, string((char *)&header_size, 4)); //header_size
+    send_rpc_str += rpc_header_str;                          //rpc_header
+    send_rpc_str += args_str;                                //args_str
 
     //打印调试信息
     cout << "<------------------------------------------------>" << endl;
@@ -113,10 +113,10 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     }
 
     //反序列化响应数据
-    string response_str(recv_buffer, recv_size);
-    if (!response->ParseFromString(response_str))
+    //String 因为遇到\0会认为是字符串结束，所以用Array
+    if (!response->ParseFromArray(recv_buffer, recv_size))
     {
-        LOG_ERROR << "parse error! response_str: " << response_str;
+        LOG_ERROR << "parse error! response_str: " << recv_buffer;
         close(client_fd);
         return;
     }

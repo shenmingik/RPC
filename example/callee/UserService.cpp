@@ -15,6 +15,7 @@ public:
     {
         cout << "doing local service:login: " << endl;
         cout << "name: " << name << " password: " << password << endl;
+        return true;
     }
 
     //重写基类UserServiceRpc的虚函数，供框架调用

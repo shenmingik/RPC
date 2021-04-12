@@ -93,6 +93,8 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     //从字符流中读取前四个字节的内容(利用int特性),即header的长度
     uint32_t header_size = 0;
     recv_buf.copy((char *)&header_size, 4, 0);
+    
+    cout << "header size: " << header_size << endl;
 
     //根据header_size读取数据头的原始字符流
     string rpc_header_str = recv_buf.substr(4, header_size);
