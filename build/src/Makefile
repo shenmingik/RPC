@@ -152,6 +152,33 @@ RpcApplication.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcApplication.cpp.s
 .PHONY : RpcApplication.cpp.s
 
+RpcChannel.o: RpcChannel.cpp.o
+
+.PHONY : RpcChannel.o
+
+# target to build an object file
+RpcChannel.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcChannel.cpp.o
+.PHONY : RpcChannel.cpp.o
+
+RpcChannel.i: RpcChannel.cpp.i
+
+.PHONY : RpcChannel.i
+
+# target to preprocess a source file
+RpcChannel.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcChannel.cpp.i
+.PHONY : RpcChannel.cpp.i
+
+RpcChannel.s: RpcChannel.cpp.s
+
+.PHONY : RpcChannel.s
+
+# target to generate assembly for a file
+RpcChannel.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcChannel.cpp.s
+.PHONY : RpcChannel.cpp.s
+
 RpcConfigure.o: RpcConfigure.cpp.o
 
 .PHONY : RpcConfigure.o
@@ -245,6 +272,9 @@ help:
 	@echo "... RpcApplication.o"
 	@echo "... RpcApplication.i"
 	@echo "... RpcApplication.s"
+	@echo "... RpcChannel.o"
+	@echo "... RpcChannel.i"
+	@echo "... RpcChannel.s"
 	@echo "... RpcConfigure.o"
 	@echo "... RpcConfigure.i"
 	@echo "... RpcConfigure.s"

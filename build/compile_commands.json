@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcChannel.cpp.o -c /home/ubuntu/code/RPC/src/RpcChannel.cpp",
+  "file": "/home/ubuntu/code/RPC/src/RpcChannel.cpp"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/src",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp",
   "file": "/home/ubuntu/code/RPC/src/RpcConfigure.cpp"
 },
@@ -27,6 +32,16 @@
 {
   "directory": "/home/ubuntu/code/RPC/build/example/callee",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/provider.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc",
+  "file": "/home/ubuntu/code/RPC/example/src/User.pb.cc"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/example/caller",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/client.dir/CallUserService.cpp.o -c /home/ubuntu/code/RPC/example/caller/CallUserService.cpp",
+  "file": "/home/ubuntu/code/RPC/example/caller/CallUserService.cpp"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/example/caller",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/client.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc",
   "file": "/home/ubuntu/code/RPC/example/src/User.pb.cc"
 }
 ]

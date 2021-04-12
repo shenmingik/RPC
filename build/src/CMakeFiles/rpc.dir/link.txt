@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../../lib/librpc.a  CMakeFiles/rpc.dir/RpcApplication.cpp.o CMakeFiles/rpc.dir/RpcConfigure.cpp.o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o CMakeFiles/rpc.dir/RpcProvider.cpp.o
+/usr/bin/ar qc ../../lib/librpc.a  CMakeFiles/rpc.dir/RpcApplication.cpp.o CMakeFiles/rpc.dir/RpcChannel.cpp.o CMakeFiles/rpc.dir/RpcConfigure.cpp.o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o CMakeFiles/rpc.dir/RpcProvider.cpp.o
 /usr/bin/ranlib ../../lib/librpc.a

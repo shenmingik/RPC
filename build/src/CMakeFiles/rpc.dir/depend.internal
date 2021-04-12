@@ -5,6 +5,12 @@ src/CMakeFiles/rpc.dir/RpcApplication.cpp.o
  ../src/include/RpcApplication.hpp
  ../src/include/RpcConfigure.hpp
  /home/ubuntu/code/RPC/src/RpcApplication.cpp
+src/CMakeFiles/rpc.dir/RpcChannel.cpp.o
+ ../src/include/RpcApplication.hpp
+ ../src/include/RpcChannel.hpp
+ ../src/include/RpcConfigure.hpp
+ ../src/include/RpcHeader.pb.h
+ /home/ubuntu/code/RPC/src/RpcChannel.cpp
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
  ../src/include/RpcConfigure.hpp
  /home/ubuntu/code/RPC/src/RpcConfigure.cpp

@@ -10,6 +10,18 @@
 RpcConfigure.hpp
 ../src/include/RpcConfigure.hpp
 
+../src/include/RpcChannel.hpp
+google/protobuf/service.h
+-
+google/protobuf/descriptor.h
+-
+google/protobuf/message.h
+-
+string
+-
+iostream
+-
+
 ../src/include/RpcConfigure.hpp
 unordered_map
 -
@@ -76,6 +88,26 @@ iostream
 unistd.h
 -
 string
+-
+
+/home/ubuntu/code/RPC/src/RpcChannel.cpp
+RpcChannel.hpp
+/home/ubuntu/code/RPC/src/RpcChannel.hpp
+RpcApplication.hpp
+/home/ubuntu/code/RPC/src/RpcApplication.hpp
+RpcHeader.pb.h
+/home/ubuntu/code/RPC/src/RpcHeader.pb.h
+muduo/base/Logging.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+sys/types.h
+-
+errno.h
 -
 
 /home/ubuntu/code/RPC/src/RpcConfigure.cpp
