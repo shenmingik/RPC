@@ -179,6 +179,33 @@ RpcConfigure.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcConfigure.cpp.s
 .PHONY : RpcConfigure.cpp.s
 
+RpcHeader.pb.o: RpcHeader.pb.cc.o
+
+.PHONY : RpcHeader.pb.o
+
+# target to build an object file
+RpcHeader.pb.cc.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o
+.PHONY : RpcHeader.pb.cc.o
+
+RpcHeader.pb.i: RpcHeader.pb.cc.i
+
+.PHONY : RpcHeader.pb.i
+
+# target to preprocess a source file
+RpcHeader.pb.cc.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.i
+.PHONY : RpcHeader.pb.cc.i
+
+RpcHeader.pb.s: RpcHeader.pb.cc.s
+
+.PHONY : RpcHeader.pb.s
+
+# target to generate assembly for a file
+RpcHeader.pb.cc.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.s
+.PHONY : RpcHeader.pb.cc.s
+
 RpcProvider.o: RpcProvider.cpp.o
 
 .PHONY : RpcProvider.o
@@ -221,6 +248,9 @@ help:
 	@echo "... RpcConfigure.o"
 	@echo "... RpcConfigure.i"
 	@echo "... RpcConfigure.s"
+	@echo "... RpcHeader.pb.o"
+	@echo "... RpcHeader.pb.i"
+	@echo "... RpcHeader.pb.s"
 	@echo "... RpcProvider.o"
 	@echo "... RpcProvider.i"
 	@echo "... RpcProvider.s"

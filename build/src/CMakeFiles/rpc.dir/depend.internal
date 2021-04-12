@@ -8,6 +8,9 @@ src/CMakeFiles/rpc.dir/RpcApplication.cpp.o
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
  ../src/include/RpcConfigure.hpp
  /home/ubuntu/code/RPC/src/RpcConfigure.cpp
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o
+ ../src/include/RpcHeader.pb.h
+ /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
  ../src/include/RpcApplication.hpp
  ../src/include/RpcConfigure.hpp

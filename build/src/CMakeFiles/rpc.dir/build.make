@@ -105,9 +105,33 @@ src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.provides: src/CMakeFiles/rpc.dir/RpcCo
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.provides.build: src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
 
 
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: src/CMakeFiles/rpc.dir/flags.make
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: ../src/RpcHeader.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o -c /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
+
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcHeader.pb.cc.i"
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcHeader.pb.cc > CMakeFiles/rpc.dir/RpcHeader.pb.cc.i
+
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcHeader.pb.cc.s"
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcHeader.pb.cc -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.s
+
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.requires:
+
+.PHONY : src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.requires
+
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides: src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides.build
+.PHONY : src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides
+
+src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides.build: src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o
+
+
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.i: cmake_force
@@ -133,6 +157,7 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o.provides.build: src/CMakeFiles/rpc.dir/
 rpc_OBJECTS = \
 "CMakeFiles/rpc.dir/RpcApplication.cpp.o" \
 "CMakeFiles/rpc.dir/RpcConfigure.cpp.o" \
+"CMakeFiles/rpc.dir/RpcHeader.pb.cc.o" \
 "CMakeFiles/rpc.dir/RpcProvider.cpp.o"
 
 # External object files for target rpc
@@ -140,10 +165,11 @@ rpc_EXTERNAL_OBJECTS =
 
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcApplication.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
+../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/build.make
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../lib/librpc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../lib/librpc.a"
 	cd /home/ubuntu/code/RPC/build/src && $(CMAKE_COMMAND) -P CMakeFiles/rpc.dir/cmake_clean_target.cmake
 	cd /home/ubuntu/code/RPC/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rpc.dir/link.txt --verbose=$(VERBOSE)
 
@@ -154,6 +180,7 @@ src/CMakeFiles/rpc.dir/build: ../lib/librpc.a
 
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcApplication.cpp.o.requires
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.requires
+src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.requires
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcProvider.cpp.o.requires
 
 .PHONY : src/CMakeFiles/rpc.dir/requires

@@ -7,6 +7,7 @@
 #include <muduo/net/TcpConnection.h>
 #include <muduo/net/Buffer.h>
 #include <muduo/base/Timestamp.h>
+#include <muduo/base/Logging.h>
 
 #include <unordered_map>
 #include <string>
@@ -33,6 +34,9 @@ private:
 
     //已建立连接的读写事件回调
     void on_message(const TcpConnectionPtr &conn, Buffer *buffer, Timestamp stamp);
+
+    //Clouser的回调操作，用于序列化rpc的响应和网络发送
+    void send_rpc_response(const TcpConnectionPtr &conn,google::protobuf::Message* reponse);
 
 private:
     //服务类型信息

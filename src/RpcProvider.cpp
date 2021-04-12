@@ -63,7 +63,7 @@ void RpcProvider::run()
 //新socket连接的回调
 void RpcProvider::on_connection(const TcpConnectionPtr &conn)
 {
-    if(!conn->connected())
+    if (!conn->connected())
     {
         //和rpc client断开连接
         conn->shutdown();
@@ -72,14 +72,14 @@ void RpcProvider::on_connection(const TcpConnectionPtr &conn)
 
 /*
     在框架内部，RpcPrivoder和RpcConsumer协商好之间通信用的protobuf类型
-标识长度：header_size
+标识长度：header_size = service_name + method_name + argc_size
     service_name ==> service
     method_name ==> method
--->16UserServiceLogin
+    定义proto的message类型：
+        args
 
-定义proto的message类型：
-    args
-
+recv_buf = header + args
+16UserServiceLogin15zhang san123456
 
 --> header_size（4字节）+ header_str + args_str
 */
@@ -89,4 +89,95 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
 {
     // 网络上接受的远程rpc调用请求的字符流
     string recv_buf = buffer->retrieveAllAsString();
+
+    //从字符流中读取前四个字节的内容(利用int特性),即header的长度
+    uint32_t header_size = 0;
+    recv_buf.copy((char *)&header_size, 4, 0);
+
+    //根据header_size读取数据头的原始字符流
+    string rpc_header_str = recv_buf.substr(4, header_size);
+
+    //反序列化
+    ikrpc::RpcHeader rpc_header;
+    string service_name;
+    string method_name;
+    uint32_t args_size = 0;
+    if (rpc_header.ParseFromString(rpc_header_str))
+    {
+        //数据头反序列化成功
+        service_name = rpc_header.service_name();
+        method_name = rpc_header.method_name();
+        args_size = rpc_header.args_size();
+    }
+    else
+    {
+        //数据头反序列化失败
+        LOG_ERROR << "rpc header str: " << rpc_header_str << " parse error!";
+        return;
+    }
+
+    //解析参数
+    string args_str = recv_buf.substr(4 + header_size, args_size);
+
+    //打印调试信息
+    cout << "<------------------------------------------------>" << endl;
+    cout << "rpc header str: " << rpc_header_str << endl;
+    cout << "header size: " << header_size << endl;
+    cout << "service name: " << service_name << endl;
+    cout << "method name: " << method_name << endl;
+    cout << "args: " << args_str << endl;
+    cout << "<------------------------------------------------>" << endl;
+
+    //获取service对象和method对象
+    auto service_it = service_map_.find(service_name);
+    if (service_it == service_map_.end())
+    {
+        LOG_ERROR << service_name << " is not exist";
+        return;
+    }
+
+    auto method_it = service_it->second.method_map_.find(method_name);
+    if (method_it == service_it->second.method_map_.end())
+    {
+        LOG_ERROR << service_name << "::" << method_name << " is not exist";
+        return;
+    }
+
+    //获取service和method对象
+    google::protobuf::Service *service = service_it->second.service_;
+    const google::protobuf::MethodDescriptor *method = method_it->second;
+
+    //生成rpc方法调用的请求request 和响应response参数
+    google::protobuf::Message *request = service->GetRequestPrototype(method).New();
+    if (!request->ParseFromString(args_str))
+    {
+        LOG_ERROR << "request parse error!";
+        return;
+    }
+    google::protobuf::Message *response = service->GetResponsePrototype(method).New();
+
+    //给callMethod方法的调用，绑定一个closure回调函数
+    google::protobuf::Closure *done = google::protobuf::NewCallback<RpcProvider, const muduo::net::TcpConnectionPtr &, google::protobuf::Message *>(this, &RpcProvider::send_rpc_response, conn, response);
+
+    //在框架上根据远端rpc请求，调用响应方法
+    service->CallMethod(method, nullptr, request, response, done);
+}
+
+//Clouser的回调操作，用于序列化rpc的响应和网络发送，即序列化response
+void RpcProvider::send_rpc_response(const TcpConnectionPtr &conn, google::protobuf::Message *response)
+{
+    string response_str;
+    //序列化
+    if (response->SerializeToString(&response_str))
+    {
+        //发送序列化的数据
+        conn->send(response_str);
+    }
+    else
+    {
+        //序列化失败
+        LOG_ERROR << "serialize reponse error";
+    }
+    //短链接
+    conn->shutdown();
 }
