@@ -6,6 +6,7 @@ example/caller/CMakeFiles/client.dir/CallUserService.cpp.o
  ../src/include/RpcApplication.hpp
  ../src/include/RpcChannel.hpp
  ../src/include/RpcConfigure.hpp
+ ../src/include/RpcControl.hpp
  /home/ubuntu/code/RPC/example/caller/CallUserService.cpp
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o
  ../example/include/User.pb.h

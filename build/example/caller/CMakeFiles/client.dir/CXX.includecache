@@ -52,11 +52,19 @@ unordered_map
 string
 -
 
+../src/include/RpcControl.hpp
+google/protobuf/service.h
+-
+string
+-
+
 /home/ubuntu/code/RPC/example/caller/CallUserService.cpp
 iostream
 -
 RpcApplication.hpp
 /home/ubuntu/code/RPC/example/caller/RpcApplication.hpp
+RpcControl.hpp
+/home/ubuntu/code/RPC/example/caller/RpcControl.hpp
 User.pb.h
 /home/ubuntu/code/RPC/example/caller/User.pb.h
 RpcChannel.hpp

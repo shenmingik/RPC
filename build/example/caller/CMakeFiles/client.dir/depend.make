@@ -5,6 +5,7 @@ example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../example/include/U
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../src/include/RpcApplication.hpp
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../src/include/RpcChannel.hpp
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../src/include/RpcConfigure.hpp
+example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../src/include/RpcControl.hpp
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../example/caller/CallUserService.cpp
 
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o: ../example/include/User.pb.h

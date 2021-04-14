@@ -1,5 +1,6 @@
 #include "RpcChannel.hpp"
 #include "RpcApplication.hpp"
+#include "RpcControl.hpp"
 #include "RpcHeader.pb.h"
 #include <muduo/base/Logging.h>
 #include <sys/socket.h>
@@ -31,7 +32,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     }
     else
     {
-        LOG_ERROR << "serialize request error!";
+        controller->SetFailed("serialize request error!");
         return;
     }
 
@@ -51,7 +52,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     else
     {
         //序列化失败
-        LOG_ERROR << "serialize rpc_header error!";
+        controller->SetFailed("serialize rpc_header error!");
         return;
     }
 
@@ -97,7 +98,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     // 发送rpc请求
     if (send(client_fd, send_rpc_str.c_str(), send_rpc_str.size(), 0) == -1)
     {
-        LOG_ERROR << "send error! errno: " << errno;
+        controller->SetFailed("send error! errno: " + errno);
         close(client_fd);
         return;
     }
@@ -107,7 +108,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     ssize_t recv_size = recv(client_fd, recv_buffer, BUFF_SIZE, 0);
     if (recv_size == -1)
     {
-        LOG_ERROR << "recv error! errno: " << errno;
+        controller->SetFailed("recv error! errno: " + errno);
         close(client_fd);
         return;
     }
@@ -116,7 +117,8 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     //String 因为遇到\0会认为是字符串结束，所以用Array
     if (!response->ParseFromArray(recv_buffer, recv_size))
     {
-        LOG_ERROR << "parse error! response_str: " << recv_buffer;
+        string recv = recv_buffer;
+        controller->SetFailed("parse error! response_str: " + recv);
         close(client_fd);
         return;
     }

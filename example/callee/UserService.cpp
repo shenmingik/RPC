@@ -13,8 +13,15 @@ class UserService : public ik::UserServiceRpc //使用在rpc服务发布端
 public:
     bool Login(string name, string password)
     {
-        cout << "doing local service:login: " << endl;
+        cout << "doing local service:login: ";
         cout << "name: " << name << " password: " << password << endl;
+        return true;
+    }
+
+    bool Register(uint32_t id, string name, string password)
+    {
+        cout << "doing local service:register: ";
+        cout << "id:" << id << "name: " << name << " password: " << password << endl;
         return true;
     }
 
@@ -40,13 +47,36 @@ public:
         //执行回调操作
         done->Run();
     }
+
+    void Register(::google::protobuf::RpcController *controller,
+                  const ::ik::RegisterRequest *request,
+                  ::ik::RegisterResponse *response,
+                  ::google::protobuf::Closure *done)
+    {
+        //框架给业务上报了请求参数 request，业务获取相应数据做本地业务
+        uint32_t id = request->id();
+        string name = request->name();
+        string password = request->password();
+
+        //本地业务
+        bool login_result = Register(id,name, password);
+
+        //把响应给调用方返回
+        ik::ErrorMsg *errmsg = response->mutable_error();
+        errmsg->set_error(0);
+        errmsg->set_error_msg("");
+        response->set_success(login_result);
+
+        //执行回调操作
+        done->Run();
+    }
 };
 
 int main(int argc, char **argv)
 {
     //调用框架的初始化操作
-    RpcApplication::init(argc,argv);
-    
+    RpcApplication::init(argc, argv);
+
     //框架服务提供provider
     RpcProvider provide;
     provide.notify_service(new UserService());

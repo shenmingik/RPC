@@ -28,6 +28,12 @@ unordered_map
 string
 -
 
+../src/include/RpcControl.hpp
+google/protobuf/service.h
+-
+string
+-
+
 ../src/include/RpcHeader.pb.h
 string
 -
@@ -95,6 +101,8 @@ RpcChannel.hpp
 /home/ubuntu/code/RPC/src/RpcChannel.hpp
 RpcApplication.hpp
 /home/ubuntu/code/RPC/src/RpcApplication.hpp
+RpcControl.hpp
+/home/ubuntu/code/RPC/src/RpcControl.hpp
 RpcHeader.pb.h
 /home/ubuntu/code/RPC/src/RpcHeader.pb.h
 muduo/base/Logging.h
@@ -119,6 +127,10 @@ string
 -
 iostream
 -
+
+/home/ubuntu/code/RPC/src/RpcControl.cpp
+RpcControl.hpp
+/home/ubuntu/code/RPC/src/RpcControl.hpp
 
 /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
 RpcHeader.pb.h

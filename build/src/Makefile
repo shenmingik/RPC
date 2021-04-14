@@ -206,6 +206,33 @@ RpcConfigure.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcConfigure.cpp.s
 .PHONY : RpcConfigure.cpp.s
 
+RpcControl.o: RpcControl.cpp.o
+
+.PHONY : RpcControl.o
+
+# target to build an object file
+RpcControl.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcControl.cpp.o
+.PHONY : RpcControl.cpp.o
+
+RpcControl.i: RpcControl.cpp.i
+
+.PHONY : RpcControl.i
+
+# target to preprocess a source file
+RpcControl.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcControl.cpp.i
+.PHONY : RpcControl.cpp.i
+
+RpcControl.s: RpcControl.cpp.s
+
+.PHONY : RpcControl.s
+
+# target to generate assembly for a file
+RpcControl.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcControl.cpp.s
+.PHONY : RpcControl.cpp.s
+
 RpcHeader.pb.o: RpcHeader.pb.cc.o
 
 .PHONY : RpcHeader.pb.o
@@ -278,6 +305,9 @@ help:
 	@echo "... RpcConfigure.o"
 	@echo "... RpcConfigure.i"
 	@echo "... RpcConfigure.s"
+	@echo "... RpcControl.o"
+	@echo "... RpcControl.i"
+	@echo "... RpcControl.s"
 	@echo "... RpcHeader.pb.o"
 	@echo "... RpcHeader.pb.i"
 	@echo "... RpcHeader.pb.s"

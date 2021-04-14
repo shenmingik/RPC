@@ -25,4 +25,18 @@ message LoginResponse
 service UserServiceRpc
 {
     rpc Login(LoginRequest) returns(LoginResponse);
+    rpc Register(RegisterRequest) returns(RegisterResponse);
+}
+
+message RegisterRequest
+{
+    uint32 id = 1;
+    bytes name = 2;
+    bytes password = 3;
+}
+
+message RegisterResponse
+{
+    ErrorMsg error = 1;
+    bool success = 2;
 }
