@@ -2,8 +2,44 @@
 
 #include "LoggerQueue.hpp"
 #include <string>
+#include <time.h>
 
 using namespace std;
+
+#define STR_SIZE 1024
+
+/*
+* 宏函数
+* 1.先获取单例对象
+* 2.组织参数
+* 3.写入日志文件
+*/
+#define LOG_INFO(logmsgformat, ...)                          \
+    do                                                       \
+    {                                                        \
+        RpcLogger &logger = RpcLogger::get_instance();       \
+        char str[STR_SIZE] = {0};                            \
+        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_info(str);                                \
+    } while ({0});
+
+#define LOG_ERROR(logmsgformat, ...)                         \
+    do                                                       \
+    {                                                        \
+        RpcLogger &logger = RpcLogger::get_instance();       \
+        char str[STR_SIZE] = {0};                            \
+        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_error(str);                               \
+    } while ({0});
+
+#define LOG_FATAL(logmsgformat, ...)                         \
+    do                                                       \
+    {                                                        \
+        RpcLogger &logger = RpcLogger::get_instance();       \
+        char str[STR_SIZE] = {0};                            \
+        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_fatal(str);                               \
+    } while ({0});
 
 enum LogLevel
 {
@@ -20,7 +56,7 @@ public:
     void log_error(string msg);
     void log_fatal(string msg);
 
-    RpcLogger &get_instance()
+    static RpcLogger &get_instance()
     {
         static RpcLogger instance;
         return instance;

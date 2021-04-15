@@ -125,6 +125,33 @@ rpc/fast:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
 .PHONY : rpc/fast
 
+LoggerQueue.o: LoggerQueue.cpp.o
+
+.PHONY : LoggerQueue.o
+
+# target to build an object file
+LoggerQueue.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o
+.PHONY : LoggerQueue.cpp.o
+
+LoggerQueue.i: LoggerQueue.cpp.i
+
+.PHONY : LoggerQueue.i
+
+# target to preprocess a source file
+LoggerQueue.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.i
+.PHONY : LoggerQueue.cpp.i
+
+LoggerQueue.s: LoggerQueue.cpp.s
+
+.PHONY : LoggerQueue.s
+
+# target to generate assembly for a file
+LoggerQueue.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.s
+.PHONY : LoggerQueue.cpp.s
+
 RpcApplication.o: RpcApplication.cpp.o
 
 .PHONY : RpcApplication.o
@@ -260,6 +287,33 @@ RpcHeader.pb.cc.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.s
 .PHONY : RpcHeader.pb.cc.s
 
+RpcLogger.o: RpcLogger.cpp.o
+
+.PHONY : RpcLogger.o
+
+# target to build an object file
+RpcLogger.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcLogger.cpp.o
+.PHONY : RpcLogger.cpp.o
+
+RpcLogger.i: RpcLogger.cpp.i
+
+.PHONY : RpcLogger.i
+
+# target to preprocess a source file
+RpcLogger.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcLogger.cpp.i
+.PHONY : RpcLogger.cpp.i
+
+RpcLogger.s: RpcLogger.cpp.s
+
+.PHONY : RpcLogger.s
+
+# target to generate assembly for a file
+RpcLogger.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcLogger.cpp.s
+.PHONY : RpcLogger.cpp.s
+
 RpcProvider.o: RpcProvider.cpp.o
 
 .PHONY : RpcProvider.o
@@ -296,6 +350,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rpc"
 	@echo "... edit_cache"
+	@echo "... LoggerQueue.o"
+	@echo "... LoggerQueue.i"
+	@echo "... LoggerQueue.s"
 	@echo "... RpcApplication.o"
 	@echo "... RpcApplication.i"
 	@echo "... RpcApplication.s"
@@ -311,6 +368,9 @@ help:
 	@echo "... RpcHeader.pb.o"
 	@echo "... RpcHeader.pb.i"
 	@echo "... RpcHeader.pb.s"
+	@echo "... RpcLogger.o"
+	@echo "... RpcLogger.i"
+	@echo "... RpcLogger.s"
 	@echo "... RpcProvider.o"
 	@echo "... RpcProvider.i"
 	@echo "... RpcProvider.s"

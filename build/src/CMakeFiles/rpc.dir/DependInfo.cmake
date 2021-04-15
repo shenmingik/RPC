@@ -4,11 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ubuntu/code/RPC/src/LoggerQueue.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcApplication.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcApplication.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcChannel.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcChannel.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcConfigure.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcControl.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcControl.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcHeader.pb.cc" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
+  "/home/ubuntu/code/RPC/src/RpcLogger.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcLogger.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcProvider.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

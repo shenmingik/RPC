@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/LoggerQueue.cpp.o -c /home/ubuntu/code/RPC/src/LoggerQueue.cpp",
+  "file": "/home/ubuntu/code/RPC/src/LoggerQueue.cpp"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/src",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp",
   "file": "/home/ubuntu/code/RPC/src/RpcApplication.cpp"
 },
@@ -23,6 +28,11 @@
   "directory": "/home/ubuntu/code/RPC/build/src",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o -c /home/ubuntu/code/RPC/src/RpcHeader.pb.cc",
   "file": "/home/ubuntu/code/RPC/src/RpcHeader.pb.cc"
+},
+{
+  "directory": "/home/ubuntu/code/RPC/build/src",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/RpcLogger.cpp.o -c /home/ubuntu/code/RPC/src/RpcLogger.cpp",
+  "file": "/home/ubuntu/code/RPC/src/RpcLogger.cpp"
 },
 {
   "directory": "/home/ubuntu/code/RPC/build/src",
