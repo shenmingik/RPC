@@ -12,8 +12,25 @@ template <class T>
 class LoggerQueue
 {
 public:
-    void push(const T &data);
-    T &pop();
+    void push(const T &data)
+    {
+        lock_guard<mutex> lock(mutex_);
+        queue_.push(data);
+        condition_.notify_one();
+    }
+
+    T pop()
+    {
+        unique_lock<mutex> lock(mutex_);
+        while (queue_.empty())
+        {
+            //日志队列为空，线程进入wait
+            condition_.wait(lock);
+        }
+        T ret = queue_.front();
+        queue_.pop();
+        return ret;
+    }
 
 private:
     queue<T> queue_;

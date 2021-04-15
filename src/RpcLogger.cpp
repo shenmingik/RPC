@@ -12,15 +12,15 @@ void RpcLogger::log_info(string msg)
 }
 void RpcLogger::log_error(string msg)
 {
-    set_level(INFO);
+    set_level(ERROR);
     log(msg);
 }
 void RpcLogger::log_fatal(string msg)
 {
-    set_level(INFO);
+    set_level(FATAL);
     log(msg);
     LOG_ERROR << "Force Majeure is being dealt with";
-    sleep(10);
+    //sleep(10);
     LOG_ERROR << "Question has been record in log file, please restore system,bye";
     exit(0);
 }
@@ -74,19 +74,14 @@ RpcLogger::RpcLogger()
             }
 
             string msg;
-            do
-            {
-                char time_buf[TIME_BUFFER] = {0};
-                sprintf(time_buf, "%2d:%2d:%2d=>", now_time->tm_hour, now_time->tm_min, now_time->tm_sec);
-                msg = log_queue_.pop();
-                msg.insert(0, time_buf);
-                fputs(msg.c_str(), file_ptr);
-            } while (!msg.empty());
+            char time_buf[TIME_BUFFER] = {0};
+            sprintf(time_buf, "%2d:%2d:%2d=>", now_time->tm_hour, now_time->tm_min, now_time->tm_sec);
+            msg = log_queue_.pop();
+            msg.insert(0, time_buf);
+            msg += '\n';
+            fputs(msg.c_str(), file_ptr);
 
             fclose(file_ptr);
-
-            //每10秒写一次数据
-            sleep(10);
         }
     });
 

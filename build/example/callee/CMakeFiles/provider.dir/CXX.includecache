@@ -30,6 +30,16 @@ google/protobuf/service.h
 google/protobuf/unknown_field_set.h
 -
 
+../src/include/LoggerQueue.hpp
+queue
+-
+mutex
+-
+thread
+-
+condition_variable
+-
+
 ../src/include/RpcApplication.hpp
 RpcConfigure.hpp
 ../src/include/RpcConfigure.hpp
@@ -38,6 +48,14 @@ RpcConfigure.hpp
 unordered_map
 -
 string
+-
+
+../src/include/RpcLogger.hpp
+LoggerQueue.hpp
+../src/include/LoggerQueue.hpp
+string
+-
+time.h
 -
 
 ../src/include/RpcProvider.hpp
@@ -79,6 +97,8 @@ RpcApplication.hpp
 /home/ubuntu/code/RPC/example/callee/RpcApplication.hpp
 RpcProvider.hpp
 /home/ubuntu/code/RPC/example/callee/RpcProvider.hpp
+RpcLogger.hpp
+/home/ubuntu/code/RPC/example/callee/RpcLogger.hpp
 
 /home/ubuntu/code/RPC/example/src/User.pb.cc
 User.pb.h

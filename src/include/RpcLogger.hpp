@@ -14,32 +14,32 @@ using namespace std;
 * 2.组织参数
 * 3.写入日志文件
 */
-#define LOG_INFO(logmsgformat, ...)                          \
-    do                                                       \
-    {                                                        \
-        RpcLogger &logger = RpcLogger::get_instance();       \
-        char str[STR_SIZE] = {0};                            \
-        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
-        logger.log_info(str);                                \
-    } while ({0});
+#define RPC_LOG_INFO(logmsgformat, ...)                       \
+    do                                                        \
+    {                                                         \
+        RpcLogger &logger = RpcLogger::get_instance();        \
+        char str[STR_SIZE] = {0};                             \
+        snprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_info(str);                                 \
+    } while (0);
 
-#define LOG_ERROR(logmsgformat, ...)                         \
-    do                                                       \
-    {                                                        \
-        RpcLogger &logger = RpcLogger::get_instance();       \
-        char str[STR_SIZE] = {0};                            \
-        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
-        logger.log_error(str);                               \
-    } while ({0});
+#define RPC_LOG_ERROR(logmsgformat, ...)                      \
+    do                                                        \
+    {                                                         \
+        RpcLogger &logger = RpcLogger::get_instance();        \
+        char str[STR_SIZE] = {0};                             \
+        snprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_error(str);                                \
+    } while (0);
 
-#define LOG_FATAL(logmsgformat, ...)                         \
-    do                                                       \
-    {                                                        \
-        RpcLogger &logger = RpcLogger::get_instance();       \
-        char str[STR_SIZE] = {0};                            \
-        sprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
-        logger.log_fatal(str);                               \
-    } while ({0});
+#define RPC_LOG_FATAL(logmsgformat, ...)                      \
+    do                                                        \
+    {                                                         \
+        RpcLogger &logger = RpcLogger::get_instance();        \
+        char str[STR_SIZE] = {0};                             \
+        snprintf(str, STR_SIZE, logmsgformat, ##__VA_ARGS__); \
+        logger.log_fatal(str);                                \
+    } while (0);
 
 enum LogLevel
 {

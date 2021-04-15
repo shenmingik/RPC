@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/rpc.dir/LoggerQueue.cpp.o"
   "CMakeFiles/rpc.dir/RpcApplication.cpp.o"
   "CMakeFiles/rpc.dir/RpcChannel.cpp.o"
   "CMakeFiles/rpc.dir/RpcConfigure.cpp.o"

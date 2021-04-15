@@ -125,33 +125,6 @@ rpc/fast:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/build
 .PHONY : rpc/fast
 
-LoggerQueue.o: LoggerQueue.cpp.o
-
-.PHONY : LoggerQueue.o
-
-# target to build an object file
-LoggerQueue.cpp.o:
-	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o
-.PHONY : LoggerQueue.cpp.o
-
-LoggerQueue.i: LoggerQueue.cpp.i
-
-.PHONY : LoggerQueue.i
-
-# target to preprocess a source file
-LoggerQueue.cpp.i:
-	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.i
-.PHONY : LoggerQueue.cpp.i
-
-LoggerQueue.s: LoggerQueue.cpp.s
-
-.PHONY : LoggerQueue.s
-
-# target to generate assembly for a file
-LoggerQueue.cpp.s:
-	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.s
-.PHONY : LoggerQueue.cpp.s
-
 RpcApplication.o: RpcApplication.cpp.o
 
 .PHONY : RpcApplication.o
@@ -350,9 +323,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rpc"
 	@echo "... edit_cache"
-	@echo "... LoggerQueue.o"
-	@echo "... LoggerQueue.i"
-	@echo "... LoggerQueue.s"
 	@echo "... RpcApplication.o"
 	@echo "... RpcApplication.i"
 	@echo "... RpcApplication.s"

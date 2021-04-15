@@ -57,33 +57,9 @@ include src/CMakeFiles/rpc.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/rpc.dir/flags.make
 
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o: src/CMakeFiles/rpc.dir/flags.make
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o: ../src/LoggerQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/LoggerQueue.cpp.o -c /home/ubuntu/code/RPC/src/LoggerQueue.cpp
-
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/LoggerQueue.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/LoggerQueue.cpp > CMakeFiles/rpc.dir/LoggerQueue.cpp.i
-
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/LoggerQueue.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/LoggerQueue.cpp -o CMakeFiles/rpc.dir/LoggerQueue.cpp.s
-
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.requires
-
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.provides: src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.provides.build
-.PHONY : src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.provides
-
-src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.provides.build: src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o
-
-
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.o: ../src/RpcApplication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/rpc.dir/RpcApplication.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/rpc.dir/RpcApplication.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp
 
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.i: cmake_force
@@ -107,7 +83,7 @@ src/CMakeFiles/rpc.dir/RpcApplication.cpp.o.provides.build: src/CMakeFiles/rpc.d
 
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/RpcChannel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/rpc.dir/RpcChannel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/rpc.dir/RpcChannel.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcChannel.cpp.o -c /home/ubuntu/code/RPC/src/RpcChannel.cpp
 
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.i: cmake_force
@@ -131,7 +107,7 @@ src/CMakeFiles/rpc.dir/RpcChannel.cpp.o.provides.build: src/CMakeFiles/rpc.dir/R
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: ../src/RpcConfigure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.i: cmake_force
@@ -155,7 +131,7 @@ src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.provides.build: src/CMakeFiles/rpc.dir
 
 src/CMakeFiles/rpc.dir/RpcControl.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcControl.cpp.o: ../src/RpcControl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/rpc.dir/RpcControl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/rpc.dir/RpcControl.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcControl.cpp.o -c /home/ubuntu/code/RPC/src/RpcControl.cpp
 
 src/CMakeFiles/rpc.dir/RpcControl.cpp.i: cmake_force
@@ -179,7 +155,7 @@ src/CMakeFiles/rpc.dir/RpcControl.cpp.o.provides.build: src/CMakeFiles/rpc.dir/R
 
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: ../src/RpcHeader.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o -c /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
 
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.i: cmake_force
@@ -203,7 +179,7 @@ src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides.build: src/CMakeFiles/rpc.dir/
 
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.o: ../src/RpcLogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/rpc.dir/RpcLogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/rpc.dir/RpcLogger.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcLogger.cpp.o -c /home/ubuntu/code/RPC/src/RpcLogger.cpp
 
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.i: cmake_force
@@ -227,7 +203,7 @@ src/CMakeFiles/rpc.dir/RpcLogger.cpp.o.provides.build: src/CMakeFiles/rpc.dir/Rp
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
 	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.i: cmake_force
@@ -251,7 +227,6 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o.provides.build: src/CMakeFiles/rpc.dir/
 
 # Object files for target rpc
 rpc_OBJECTS = \
-"CMakeFiles/rpc.dir/LoggerQueue.cpp.o" \
 "CMakeFiles/rpc.dir/RpcApplication.cpp.o" \
 "CMakeFiles/rpc.dir/RpcChannel.cpp.o" \
 "CMakeFiles/rpc.dir/RpcConfigure.cpp.o" \
@@ -263,7 +238,6 @@ rpc_OBJECTS = \
 # External object files for target rpc
 rpc_EXTERNAL_OBJECTS =
 
-../lib/librpc.a: src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcApplication.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcChannel.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
@@ -273,7 +247,7 @@ rpc_EXTERNAL_OBJECTS =
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/build.make
 ../lib/librpc.a: src/CMakeFiles/rpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library ../../lib/librpc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library ../../lib/librpc.a"
 	cd /home/ubuntu/code/RPC/build/src && $(CMAKE_COMMAND) -P CMakeFiles/rpc.dir/cmake_clean_target.cmake
 	cd /home/ubuntu/code/RPC/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rpc.dir/link.txt --verbose=$(VERBOSE)
 
@@ -282,7 +256,6 @@ src/CMakeFiles/rpc.dir/build: ../lib/librpc.a
 
 .PHONY : src/CMakeFiles/rpc.dir/build
 
-src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/LoggerQueue.cpp.o.requires
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcApplication.cpp.o.requires
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcChannel.cpp.o.requires
 src/CMakeFiles/rpc.dir/requires: src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.requires

@@ -3,8 +3,10 @@
 
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o
  ../example/include/User.pb.h
+ ../src/include/LoggerQueue.hpp
  ../src/include/RpcApplication.hpp
  ../src/include/RpcConfigure.hpp
+ ../src/include/RpcLogger.hpp
  ../src/include/RpcProvider.hpp
  /home/ubuntu/code/RPC/example/callee/UserService.cpp
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o

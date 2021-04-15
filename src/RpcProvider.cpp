@@ -1,6 +1,7 @@
 #include "RpcProvider.hpp"
 #include "RpcApplication.hpp"
 #include "RpcHeader.pb.h"
+#include "RpcLogger.hpp"
 
 using namespace std;
 using namespace placeholders;

@@ -3,6 +3,7 @@
 #include "User.pb.h"
 #include "RpcApplication.hpp"
 #include "RpcProvider.hpp"
+#include "RpcLogger.hpp"
 
 using namespace std;
 /*
@@ -59,7 +60,7 @@ public:
         string password = request->password();
 
         //本地业务
-        bool login_result = Register(id,name, password);
+        bool login_result = Register(id, name, password);
 
         //把响应给调用方返回
         ik::ErrorMsg *errmsg = response->mutable_error();
@@ -74,6 +75,8 @@ public:
 
 int main(int argc, char **argv)
 {
+    RPC_LOG_INFO("HELLO");
+    RPC_LOG_ERROR("%s,%s,%d", __FILE__, __FUNCTION__, __LINE__);
     //调用框架的初始化操作
     RpcApplication::init(argc, argv);
 

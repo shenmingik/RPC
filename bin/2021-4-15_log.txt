@@ -1,0 +1,4 @@
+15:41:22=>[INFO]: HELLO
+15:41:22=>[INFO]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+15:46:20=>[INFO]: HELLO
+15:46:20=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
