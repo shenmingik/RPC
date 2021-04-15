@@ -2,11 +2,13 @@
 #include "RpcApplication.hpp"
 #include "RpcControl.hpp"
 #include "RpcHeader.pb.h"
-#include <muduo/base/Logging.h>
+#include "RpcLogger.hpp"
+
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <sys/types.h>
+#include <unistd.h>
 #include <errno.h>
 
 using namespace std;
@@ -62,22 +64,12 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     send_rpc_str += rpc_header_str;                          //rpc_header
     send_rpc_str += args_str;                                //args_str
 
-    //打印调试信息
-    cout << "<------------------------------------------------>" << endl;
-    cout << "rpc header str: " << rpc_header_str << endl;
-    cout << "header size: " << header_size << endl;
-    cout << "service name: " << service_name << endl;
-    cout << "method name: " << method_name << endl;
-    cout << "args: " << args_str << endl;
-    cout << "send rpc str: " << send_rpc_str << endl;
-    cout << "<------------------------------------------------>" << endl;
-
     //使用tcp编程，完成rpc方法的远程调用
     int client_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (client_fd == -1)
     {
         close(client_fd);
-        LOG_FATAL << "create socket error! errno: " << errno;
+        RPC_LOG_FATAL("create socket error! errno:%d",errno);
     }
 
     //获取ip和port
@@ -92,7 +84,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (connect(client_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1)
     {
         close(client_fd);
-        LOG_FATAL << "connet error! errno: " << errno;
+        RPC_LOG_FATAL("connet error! errno: %d",errno);
     }
 
     // 发送rpc请求

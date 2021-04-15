@@ -1,4 +1,5 @@
 #include "RpcConfigure.hpp"
+#include "RpcLogger.hpp"
 #include <muduo/base/Logging.h>
 #include <string>
 #include <iostream>
@@ -12,7 +13,7 @@ void RpcConfigure::load_configure(const char *config_file)
     FILE *pf = fopen(config_file, "r");
     if (pf == nullptr)
     {
-        LOG_FATAL << config_file << " is not exist!";
+        RPC_LOG_FATAL("%s is not exist!",config_file);
     }
 
     // 1.注释 2.正确的配置项 3.去掉开头多余的空格
@@ -35,7 +36,7 @@ void RpcConfigure::load_configure(const char *config_file)
         int index = str_buf.find('=');
         if (index == -1)
         {
-            LOG_ERROR << "configure file illegal";
+            RPC_LOG_ERROR("configure file illegal!");
             continue;
         }
 

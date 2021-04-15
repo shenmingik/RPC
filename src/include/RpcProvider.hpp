@@ -6,8 +6,6 @@
 #include <muduo/net/InetAddress.h>
 #include <muduo/net/TcpConnection.h>
 #include <muduo/net/Buffer.h>
-#include <muduo/base/Timestamp.h>
-#include <muduo/base/Logging.h>
 
 #include <unordered_map>
 #include <string>

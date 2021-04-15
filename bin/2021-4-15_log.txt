@@ -1,4 +1,19 @@
-15:41:22=>[INFO]: HELLO
-15:41:22=>[INFO]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
-15:46:20=>[INFO]: HELLO
-15:46:20=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+16:28:12=>[INFO]: HELLO
+16:28:12=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+16:28:12=>[INFO]: header size: 25
+16:28:14=>[INFO]: <------------------------------------------------>
+16:28:14=>[INFO]: rpc header str: 
+UserServiceRpcLogin
+16:28:14=>[INFO]: service name: UserServiceRpc
+16:28:14=>[INFO]: method name: Login
+16:28:14=>[INFO]: args: 
+	zhang san123456
+16:28:14=>[INFO]: <------------------------------------------------>
+16:28:14=>[INFO]: header size: 28
+16:28:14=>[INFO]: <------------------------------------------------>
+16:28:14=>[INFO]: rpc header str: 
+UserServiceRpcRegister
+16:28:14=>[INFO]: service name: UserServiceRpc
+16:28:14=>[INFO]: method name: Register
+16:28:14=>[INFO]: args: Ðrpc123456
+16:28:14=>[INFO]: <------------------------------------------------>

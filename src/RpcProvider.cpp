@@ -59,6 +59,7 @@ void RpcProvider::run()
     //启动网络服务
     server.start();
     eventloop_.loop();
+    RPC_LOG_INFO("server RpcProvider [ip: %s][port: %d]",ip.c_str(),port);
 }
 
 //新socket连接的回调
@@ -94,8 +95,8 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     //从字符流中读取前四个字节的内容(利用int特性),即header的长度
     uint32_t header_size = 0;
     recv_buf.copy((char *)&header_size, 4, 0);
-    
-    cout << "header size: " << header_size << endl;
+
+    RPC_LOG_INFO("header size: %d", header_size);
 
     //根据header_size读取数据头的原始字符流
     string rpc_header_str = recv_buf.substr(4, header_size);
@@ -115,7 +116,7 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     else
     {
         //数据头反序列化失败
-        LOG_ERROR << "rpc header str: " << rpc_header_str << " parse error!";
+        RPC_LOG_ERROR("rpc header str:%s parse error!", rpc_header_str.c_str());
         return;
     }
 
@@ -123,26 +124,25 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     string args_str = recv_buf.substr(4 + header_size, args_size);
 
     //打印调试信息
-    cout << "<------------------------------------------------>" << endl;
-    cout << "rpc header str: " << rpc_header_str << endl;
-    cout << "header size: " << header_size << endl;
-    cout << "service name: " << service_name << endl;
-    cout << "method name: " << method_name << endl;
-    cout << "args: " << args_str << endl;
-    cout << "<------------------------------------------------>" << endl;
+    RPC_LOG_INFO("<------------------------------------------------>");
+    RPC_LOG_INFO("rpc header str: %s", rpc_header_str.c_str());
+    RPC_LOG_INFO("service name: %s", service_name.c_str());
+    RPC_LOG_INFO("method name: %s", method_name.c_str());
+    RPC_LOG_INFO("args: %s", args_str.c_str());
+    RPC_LOG_INFO("<------------------------------------------------>");
 
     //获取service对象和method对象
     auto service_it = service_map_.find(service_name);
     if (service_it == service_map_.end())
     {
-        LOG_ERROR << service_name << " is not exist";
+        RPC_LOG_ERROR("%s is not exist",service_name.c_str());
         return;
     }
 
     auto method_it = service_it->second.method_map_.find(method_name);
     if (method_it == service_it->second.method_map_.end())
     {
-        LOG_ERROR << service_name << "::" << method_name << " is not exist";
+        RPC_LOG_ERROR("%s::%s is not exist",service_name.c_str(),method_name.c_str());
         return;
     }
 
@@ -154,7 +154,7 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     google::protobuf::Message *request = service->GetRequestPrototype(method).New();
     if (!request->ParseFromString(args_str))
     {
-        LOG_ERROR << "request parse error!";
+        RPC_LOG_ERROR("request parse error!");
         return;
     }
     google::protobuf::Message *response = service->GetResponsePrototype(method).New();
@@ -179,7 +179,7 @@ void RpcProvider::send_rpc_response(const TcpConnectionPtr &conn, google::protob
     else
     {
         //序列化失败
-        LOG_ERROR << "serialize reponse error";
+        RPC_LOG_ERROR("serialize reponse error");
     }
     //短链接
     conn->shutdown();
