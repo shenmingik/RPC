@@ -37,3 +37,10 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcLogger.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcProvider.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
 
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/LoggerQueue.hpp
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/RpcApplication.hpp
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/RpcConfigure.hpp
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/RpcLogger.hpp
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/ZookeeperClient.hpp
+src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/ZookeeperClient.cpp
+

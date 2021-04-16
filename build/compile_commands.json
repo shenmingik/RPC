@@ -35,6 +35,11 @@
   "file": "/home/ubuntu/code/RPC/src/RpcProvider.cpp"
 },
 {
+  "directory": "/home/ubuntu/code/RPC/build/src",
+  "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/rpc.dir/ZookeeperClient.cpp.o -c /home/ubuntu/code/RPC/src/ZookeeperClient.cpp",
+  "file": "/home/ubuntu/code/RPC/src/ZookeeperClient.cpp"
+},
+{
   "directory": "/home/ubuntu/code/RPC/build/example/callee",
   "command": "/usr/bin/g++-7   -I/home/ubuntu/code/RPC/src/include -I/home/ubuntu/code/RPC/example/include  -g -g   -o CMakeFiles/provider.dir/UserService.cpp.o -c /home/ubuntu/code/RPC/example/callee/UserService.cpp",
   "file": "/home/ubuntu/code/RPC/example/callee/UserService.cpp"

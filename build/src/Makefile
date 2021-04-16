@@ -314,6 +314,33 @@ RpcProvider.cpp.s:
 	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/RpcProvider.cpp.s
 .PHONY : RpcProvider.cpp.s
 
+ZookeeperClient.o: ZookeeperClient.cpp.o
+
+.PHONY : ZookeeperClient.o
+
+# target to build an object file
+ZookeeperClient.cpp.o:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o
+.PHONY : ZookeeperClient.cpp.o
+
+ZookeeperClient.i: ZookeeperClient.cpp.i
+
+.PHONY : ZookeeperClient.i
+
+# target to preprocess a source file
+ZookeeperClient.cpp.i:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.i
+.PHONY : ZookeeperClient.cpp.i
+
+ZookeeperClient.s: ZookeeperClient.cpp.s
+
+.PHONY : ZookeeperClient.s
+
+# target to generate assembly for a file
+ZookeeperClient.cpp.s:
+	cd /home/ubuntu/code/RPC/build && $(MAKE) -f src/CMakeFiles/rpc.dir/build.make src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.s
+.PHONY : ZookeeperClient.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -344,6 +371,9 @@ help:
 	@echo "... RpcProvider.o"
 	@echo "... RpcProvider.i"
 	@echo "... RpcProvider.s"
+	@echo "... ZookeeperClient.o"
+	@echo "... ZookeeperClient.i"
+	@echo "... ZookeeperClient.s"
 .PHONY : help
 
 

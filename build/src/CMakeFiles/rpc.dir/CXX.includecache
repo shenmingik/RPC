@@ -98,6 +98,14 @@ iostream
 functional
 -
 
+../src/include/ZookeeperClient.hpp
+semaphore.h
+-
+zookeeper/zookeeper.h
+-
+string
+-
+
 /home/ubuntu/code/RPC/src/RpcApplication.cpp
 RpcApplication.hpp
 /home/ubuntu/code/RPC/src/RpcApplication.hpp
@@ -191,4 +199,14 @@ RpcHeader.pb.h
 /home/ubuntu/code/RPC/src/RpcHeader.pb.h
 RpcLogger.hpp
 /home/ubuntu/code/RPC/src/RpcLogger.hpp
+
+/home/ubuntu/code/RPC/src/ZookeeperClient.cpp
+ZookeeperClient.hpp
+/home/ubuntu/code/RPC/src/ZookeeperClient.hpp
+RpcApplication.hpp
+/home/ubuntu/code/RPC/src/RpcApplication.hpp
+RpcLogger.hpp
+/home/ubuntu/code/RPC/src/RpcLogger.hpp
+iostream
+-
 

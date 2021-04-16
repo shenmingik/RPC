@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/code/RPC/src/RpcHeader.pb.cc" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
   "/home/ubuntu/code/RPC/src/RpcLogger.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcLogger.cpp.o"
   "/home/ubuntu/code/RPC/src/RpcProvider.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
+  "/home/ubuntu/code/RPC/src/ZookeeperClient.cpp" "/home/ubuntu/code/RPC/build/src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
