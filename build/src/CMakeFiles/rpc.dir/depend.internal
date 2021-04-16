@@ -13,6 +13,7 @@ src/CMakeFiles/rpc.dir/RpcChannel.cpp.o
  ../src/include/RpcControl.hpp
  ../src/include/RpcHeader.pb.h
  ../src/include/RpcLogger.hpp
+ ../src/include/ZookeeperClient.hpp
  /home/ubuntu/code/RPC/src/RpcChannel.cpp
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o
  ../src/include/LoggerQueue.hpp
@@ -36,6 +37,7 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o
  ../src/include/RpcHeader.pb.h
  ../src/include/RpcLogger.hpp
  ../src/include/RpcProvider.hpp
+ ../src/include/ZookeeperClient.hpp
  /home/ubuntu/code/RPC/src/RpcProvider.cpp
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o
  ../src/include/LoggerQueue.hpp

@@ -60,15 +60,15 @@ include src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.o: ../src/RpcApplication.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/rpc.dir/RpcApplication.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcApplication.cpp.o -c /home/ubuntu/code/RPC/src/RpcApplication.cpp
 
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcApplication.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcApplication.cpp > CMakeFiles/rpc.dir/RpcApplication.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcApplication.cpp > CMakeFiles/rpc.dir/RpcApplication.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcApplication.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcApplication.cpp -o CMakeFiles/rpc.dir/RpcApplication.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcApplication.cpp -o CMakeFiles/rpc.dir/RpcApplication.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcApplication.cpp.o.requires:
 
@@ -84,15 +84,15 @@ src/CMakeFiles/rpc.dir/RpcApplication.cpp.o.provides.build: src/CMakeFiles/rpc.d
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/RpcChannel.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/rpc.dir/RpcChannel.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcChannel.cpp.o -c /home/ubuntu/code/RPC/src/RpcChannel.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcChannel.cpp.o -c /home/ubuntu/code/RPC/src/RpcChannel.cpp
 
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcChannel.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcChannel.cpp > CMakeFiles/rpc.dir/RpcChannel.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcChannel.cpp > CMakeFiles/rpc.dir/RpcChannel.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcChannel.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcChannel.cpp -o CMakeFiles/rpc.dir/RpcChannel.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcChannel.cpp -o CMakeFiles/rpc.dir/RpcChannel.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o.requires:
 
@@ -108,15 +108,15 @@ src/CMakeFiles/rpc.dir/RpcChannel.cpp.o.provides.build: src/CMakeFiles/rpc.dir/R
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: ../src/RpcConfigure.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcConfigure.cpp.o -c /home/ubuntu/code/RPC/src/RpcConfigure.cpp
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcConfigure.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcConfigure.cpp > CMakeFiles/rpc.dir/RpcConfigure.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcConfigure.cpp > CMakeFiles/rpc.dir/RpcConfigure.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcConfigure.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcConfigure.cpp -o CMakeFiles/rpc.dir/RpcConfigure.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcConfigure.cpp -o CMakeFiles/rpc.dir/RpcConfigure.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.requires:
 
@@ -132,15 +132,15 @@ src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o.provides.build: src/CMakeFiles/rpc.dir
 src/CMakeFiles/rpc.dir/RpcControl.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcControl.cpp.o: ../src/RpcControl.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/rpc.dir/RpcControl.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcControl.cpp.o -c /home/ubuntu/code/RPC/src/RpcControl.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcControl.cpp.o -c /home/ubuntu/code/RPC/src/RpcControl.cpp
 
 src/CMakeFiles/rpc.dir/RpcControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcControl.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcControl.cpp > CMakeFiles/rpc.dir/RpcControl.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcControl.cpp > CMakeFiles/rpc.dir/RpcControl.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcControl.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcControl.cpp -o CMakeFiles/rpc.dir/RpcControl.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcControl.cpp -o CMakeFiles/rpc.dir/RpcControl.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcControl.cpp.o.requires:
 
@@ -156,15 +156,15 @@ src/CMakeFiles/rpc.dir/RpcControl.cpp.o.provides.build: src/CMakeFiles/rpc.dir/R
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o: ../src/RpcHeader.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o -c /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.o -c /home/ubuntu/code/RPC/src/RpcHeader.pb.cc
 
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcHeader.pb.cc.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcHeader.pb.cc > CMakeFiles/rpc.dir/RpcHeader.pb.cc.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcHeader.pb.cc > CMakeFiles/rpc.dir/RpcHeader.pb.cc.i
 
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcHeader.pb.cc.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcHeader.pb.cc -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcHeader.pb.cc -o CMakeFiles/rpc.dir/RpcHeader.pb.cc.s
 
 src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.requires:
 
@@ -180,15 +180,15 @@ src/CMakeFiles/rpc.dir/RpcHeader.pb.cc.o.provides.build: src/CMakeFiles/rpc.dir/
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.o: ../src/RpcLogger.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/rpc.dir/RpcLogger.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcLogger.cpp.o -c /home/ubuntu/code/RPC/src/RpcLogger.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcLogger.cpp.o -c /home/ubuntu/code/RPC/src/RpcLogger.cpp
 
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcLogger.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcLogger.cpp > CMakeFiles/rpc.dir/RpcLogger.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcLogger.cpp > CMakeFiles/rpc.dir/RpcLogger.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcLogger.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcLogger.cpp -o CMakeFiles/rpc.dir/RpcLogger.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcLogger.cpp -o CMakeFiles/rpc.dir/RpcLogger.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcLogger.cpp.o.requires:
 
@@ -204,15 +204,15 @@ src/CMakeFiles/rpc.dir/RpcLogger.cpp.o.provides.build: src/CMakeFiles/rpc.dir/Rp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/rpc.dir/RpcProvider.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/RpcProvider.cpp.o -c /home/ubuntu/code/RPC/src/RpcProvider.cpp
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/RpcProvider.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcProvider.cpp > CMakeFiles/rpc.dir/RpcProvider.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/RpcProvider.cpp > CMakeFiles/rpc.dir/RpcProvider.cpp.i
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/RpcProvider.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcProvider.cpp -o CMakeFiles/rpc.dir/RpcProvider.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/RpcProvider.cpp -o CMakeFiles/rpc.dir/RpcProvider.cpp.s
 
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o.requires:
 
@@ -228,15 +228,15 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o.provides.build: src/CMakeFiles/rpc.dir/
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: src/CMakeFiles/rpc.dir/flags.make
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/ZookeeperClient.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/ZookeeperClient.cpp.o -c /home/ubuntu/code/RPC/src/ZookeeperClient.cpp
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rpc.dir/ZookeeperClient.cpp.o -c /home/ubuntu/code/RPC/src/ZookeeperClient.cpp
 
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rpc.dir/ZookeeperClient.cpp.i"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/ZookeeperClient.cpp > CMakeFiles/rpc.dir/ZookeeperClient.cpp.i
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/src/ZookeeperClient.cpp > CMakeFiles/rpc.dir/ZookeeperClient.cpp.i
 
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rpc.dir/ZookeeperClient.cpp.s"
-	cd /home/ubuntu/code/RPC/build/src && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/ZookeeperClient.cpp -o CMakeFiles/rpc.dir/ZookeeperClient.cpp.s
+	cd /home/ubuntu/code/RPC/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/src/ZookeeperClient.cpp -o CMakeFiles/rpc.dir/ZookeeperClient.cpp.s
 
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o.requires:
 

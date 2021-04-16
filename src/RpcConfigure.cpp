@@ -13,7 +13,7 @@ void RpcConfigure::load_configure(const char *config_file)
     FILE *pf = fopen(config_file, "r");
     if (pf == nullptr)
     {
-        RPC_LOG_FATAL("%s is not exist!",config_file);
+        RPC_LOG_FATAL("%s is not exist!", config_file);
     }
 
     // 1.注释 2.正确的配置项 3.去掉开头多余的空格
@@ -42,14 +42,13 @@ void RpcConfigure::load_configure(const char *config_file)
 
         string key = str_buf.substr(0, index);
         trim(key);
-        
+
         string value = str_buf.substr(index + 1, str_buf.size() - index);
         //去除最后一个换行符'\n'
         value[value.size() - 1] = ' ';
         trim(value);
 
         configure_map_.insert({key, value});
-        //cout << "key: " << key << " value: " << value << endl;
     }
 }
 

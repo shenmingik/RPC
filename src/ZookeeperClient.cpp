@@ -34,10 +34,10 @@ ZookeeperClient::~ZookeeperClient()
 // 因为是异步，所以需要同步
 void ZookeeperClient::start()
 {
-    string host = RpcApplication::get_instance().get_configure().find_load("zookeeperip");
-    string port = RpcApplication::get_instance().get_configure().find_load("zookeeperport");
+    string host = RpcApplication::get_instance().get_configure().find_load("zookeeper_ip");
+    string port = RpcApplication::get_instance().get_configure().find_load("zookeeper_port");
     string con_str = host + ":" + port;
-
+    cout << con_str << endl;
     zhandle_ = zookeeper_init(con_str.c_str(), global_watcher, 30000, nullptr, nullptr, 0);
     if (zhandle_ == nullptr)
     {
@@ -60,7 +60,7 @@ void ZookeeperClient::create(const char *path, const char *data, int datalen, in
     int flag;
 
     //同步检查path是否存在
-    flag == zoo_exists(zhandle_, path, 0, nullptr);
+    flag = zoo_exists(zhandle_, path, 0, nullptr);
     if (ZNONODE == flag) //不存在
     {
         flag = zoo_create(zhandle_, path, data, datalen, &ZOO_OPEN_ACL_UNSAFE, state, path_buffer, buffer_len);

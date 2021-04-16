@@ -3,6 +3,7 @@
 #include "RpcControl.hpp"
 #include "RpcHeader.pb.h"
 #include "RpcLogger.hpp"
+#include "ZookeeperClient.hpp"
 
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -69,12 +70,27 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (client_fd == -1)
     {
         close(client_fd);
-        RPC_LOG_FATAL("create socket error! errno:%d",errno);
+        RPC_LOG_FATAL("create socket error! errno:%d", errno);
     }
 
     //获取ip和port
-    string ip = RpcApplication::get_instance().get_configure().find_load("rpcserver_ip");
-    uint16_t port = atoi(RpcApplication::get_instance().get_configure().find_load("rpcserver_port").c_str());
+    ZookeeperClient zk_client;
+    zk_client.start();
+    string method_path = "/" + service_name + "/" + method_name;
+    string host_data = zk_client.get_data(method_path.c_str());
+    if(host_data == "")
+    {
+        controller->SetFailed(method_path+" is not exist");
+        return;
+    }
+    int host_index = host_data.find(":");
+    if(host_index == -1)
+    {
+        controller->SetFailed(method_path+" address is invalid!");
+        return;
+    }
+    string ip = host_data.substr(0,host_index);
+    uint16_t port = atoi(host_data.substr(host_index+1,host_data.size()-host_index).c_str());
 
     struct sockaddr_in server_addr;
     server_addr.sin_family = AF_INET;
@@ -84,7 +100,7 @@ void RpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     if (connect(client_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1)
     {
         close(client_fd);
-        RPC_LOG_FATAL("connet error! errno: %d",errno);
+        RPC_LOG_FATAL("connet error! errno: %d", errno);
     }
 
     // 发送rpc请求

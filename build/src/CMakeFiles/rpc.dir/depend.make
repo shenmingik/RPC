@@ -12,6 +12,7 @@ src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/include/RpcConfigure.hpp
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/include/RpcControl.hpp
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/include/RpcHeader.pb.h
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/include/RpcLogger.hpp
+src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/include/ZookeeperClient.hpp
 src/CMakeFiles/rpc.dir/RpcChannel.cpp.o: ../src/RpcChannel.cpp
 
 src/CMakeFiles/rpc.dir/RpcConfigure.cpp.o: ../src/include/LoggerQueue.hpp
@@ -35,6 +36,7 @@ src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcConfigure.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcHeader.pb.h
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcLogger.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/RpcProvider.hpp
+src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/include/ZookeeperClient.hpp
 src/CMakeFiles/rpc.dir/RpcProvider.cpp.o: ../src/RpcProvider.cpp
 
 src/CMakeFiles/rpc.dir/ZookeeperClient.cpp.o: ../src/include/LoggerQueue.hpp

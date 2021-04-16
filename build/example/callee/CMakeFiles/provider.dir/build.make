@@ -60,15 +60,15 @@ include example/callee/CMakeFiles/provider.dir/flags.make
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o: example/callee/CMakeFiles/provider.dir/flags.make
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o: ../example/callee/UserService.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/callee/CMakeFiles/provider.dir/UserService.cpp.o"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/provider.dir/UserService.cpp.o -c /home/ubuntu/code/RPC/example/callee/UserService.cpp
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/provider.dir/UserService.cpp.o -c /home/ubuntu/code/RPC/example/callee/UserService.cpp
 
 example/callee/CMakeFiles/provider.dir/UserService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/provider.dir/UserService.cpp.i"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/callee/UserService.cpp > CMakeFiles/provider.dir/UserService.cpp.i
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/callee/UserService.cpp > CMakeFiles/provider.dir/UserService.cpp.i
 
 example/callee/CMakeFiles/provider.dir/UserService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/provider.dir/UserService.cpp.s"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/callee/UserService.cpp -o CMakeFiles/provider.dir/UserService.cpp.s
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/callee/UserService.cpp -o CMakeFiles/provider.dir/UserService.cpp.s
 
 example/callee/CMakeFiles/provider.dir/UserService.cpp.o.requires:
 
@@ -84,15 +84,15 @@ example/callee/CMakeFiles/provider.dir/UserService.cpp.o.provides.build: example
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o: example/callee/CMakeFiles/provider.dir/flags.make
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o: ../example/src/User.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/provider.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/provider.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc
 
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/provider.dir/__/src/User.pb.cc.i"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/src/User.pb.cc > CMakeFiles/provider.dir/__/src/User.pb.cc.i
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/src/User.pb.cc > CMakeFiles/provider.dir/__/src/User.pb.cc.i
 
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/provider.dir/__/src/User.pb.cc.s"
-	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/src/User.pb.cc -o CMakeFiles/provider.dir/__/src/User.pb.cc.s
+	cd /home/ubuntu/code/RPC/build/example/callee && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/src/User.pb.cc -o CMakeFiles/provider.dir/__/src/User.pb.cc.s
 
 example/callee/CMakeFiles/provider.dir/__/src/User.pb.cc.o.requires:
 

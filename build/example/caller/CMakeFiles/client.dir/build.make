@@ -60,15 +60,15 @@ include example/caller/CMakeFiles/client.dir/flags.make
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: example/caller/CMakeFiles/client.dir/flags.make
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o: ../example/caller/CallUserService.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/caller/CMakeFiles/client.dir/CallUserService.cpp.o"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/CallUserService.cpp.o -c /home/ubuntu/code/RPC/example/caller/CallUserService.cpp
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/CallUserService.cpp.o -c /home/ubuntu/code/RPC/example/caller/CallUserService.cpp
 
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/CallUserService.cpp.i"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/caller/CallUserService.cpp > CMakeFiles/client.dir/CallUserService.cpp.i
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/caller/CallUserService.cpp > CMakeFiles/client.dir/CallUserService.cpp.i
 
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/CallUserService.cpp.s"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/caller/CallUserService.cpp -o CMakeFiles/client.dir/CallUserService.cpp.s
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/caller/CallUserService.cpp -o CMakeFiles/client.dir/CallUserService.cpp.s
 
 example/caller/CMakeFiles/client.dir/CallUserService.cpp.o.requires:
 
@@ -84,15 +84,15 @@ example/caller/CMakeFiles/client.dir/CallUserService.cpp.o.provides.build: examp
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o: example/caller/CMakeFiles/client.dir/flags.make
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o: ../example/src/User.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/code/RPC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/src/User.pb.cc.o -c /home/ubuntu/code/RPC/example/src/User.pb.cc
 
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/src/User.pb.cc.i"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/src/User.pb.cc > CMakeFiles/client.dir/__/src/User.pb.cc.i
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/code/RPC/example/src/User.pb.cc > CMakeFiles/client.dir/__/src/User.pb.cc.i
 
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/src/User.pb.cc.s"
-	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/src/User.pb.cc -o CMakeFiles/client.dir/__/src/User.pb.cc.s
+	cd /home/ubuntu/code/RPC/build/example/caller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/code/RPC/example/src/User.pb.cc -o CMakeFiles/client.dir/__/src/User.pb.cc.s
 
 example/caller/CMakeFiles/client.dir/__/src/User.pb.cc.o.requires:
 

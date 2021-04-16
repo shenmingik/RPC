@@ -1,0 +1,68 @@
+17:27:44=>[INFO]: HELLO
+17:27:44=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+17:27:44=>[INFO]: zookeeper init success
+17:27:44=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+17:29:36=>[INFO]: HELLO
+17:29:36=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+17:29:36=>[INFO]: zookeeper init success
+17:29:36=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+17:35:36=>[INFO]: HELLO
+17:35:36=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+17:35:36=>[INFO]: zookeeper init success
+17:35:36=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+17:37:28=>[INFO]: HELLO
+17:37:28=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+17:37:28=>[INFO]: zookeeper init success
+17:37:28=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+17:38:30=>[INFO]: HELLO
+17:38:30=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+17:38:30=>[INFO]: zookeeper init success
+17:38:30=>[INFO]: znode create  success...path: /UserServiceRpc
+17:38:30=>[INFO]: znode create  success...path: /UserServiceRpc/Register
+17:38:30=>[INFO]: znode create  success...path: /UserServiceRpc/Login
+17:38:30=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+18:26:20=>[INFO]: HELLO
+18:26:20=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+18:26:20=>[INFO]: zookeeper init success
+18:26:20=>[INFO]: znode create  success...path: /UserServiceRpc/Register
+18:26:20=>[INFO]: znode create  success...path: /UserServiceRpc/Login
+18:26:20=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+18:26:20=>[INFO]: header size: 25
+18:26:53=>[INFO]: <------------------------------------------------>
+18:26:53=>[INFO]: rpc header str: 
+UserServiceRpcLogin
+18:26:53=>[INFO]: service name: UserServiceRpc
+18:26:53=>[INFO]: method name: Login
+18:26:53=>[INFO]: args: 
+	zhang san123456
+18:26:53=>[INFO]: <------------------------------------------------>
+18:26:53=>[INFO]: header size: 28
+18:26:53=>[INFO]: <------------------------------------------------>
+18:26:53=>[INFO]: rpc header str: 
+UserServiceRpcRegister
+18:26:53=>[INFO]: service name: UserServiceRpc
+18:26:53=>[INFO]: method name: Register
+18:26:53=>[INFO]: args: Ðrpc123456
+18:26:53=>[INFO]: <------------------------------------------------>
+20:14:45=>[INFO]: HELLO
+20:14:45=>[ERROR]: /home/ubuntu/code/RPC/example/callee/UserService.cpp,main,79
+20:14:45=>[INFO]: zookeeper init success
+20:14:45=>[INFO]: server RpcProvider [ip: 127.0.0.1][port: 8000]
+20:14:45=>[INFO]: header size: 25
+20:14:51=>[INFO]: <------------------------------------------------>
+20:14:51=>[INFO]: rpc header str: 
+UserServiceRpcLogin
+20:14:51=>[INFO]: service name: UserServiceRpc
+20:14:51=>[INFO]: method name: Login
+20:14:51=>[INFO]: args: 
+	zhang san123456
+20:14:51=>[INFO]: <------------------------------------------------>
+20:14:51=>[INFO]: zookeeper init success
+20:14:51=>[INFO]: header size: 28
+20:14:51=>[INFO]: <------------------------------------------------>
+20:14:51=>[INFO]: rpc header str: 
+UserServiceRpcRegister
+20:14:51=>[INFO]: service name: UserServiceRpc
+20:14:51=>[INFO]: method name: Register
+20:14:51=>[INFO]: args: Ðrpc123456
+20:14:51=>[INFO]: <------------------------------------------------>

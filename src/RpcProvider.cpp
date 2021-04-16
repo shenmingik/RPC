@@ -2,6 +2,7 @@
 #include "RpcApplication.hpp"
 #include "RpcHeader.pb.h"
 #include "RpcLogger.hpp"
+#include "ZookeeperClient.hpp"
 
 using namespace std;
 using namespace placeholders;
@@ -56,10 +57,29 @@ void RpcProvider::run()
     //设置muduo库的线程数量
     server.setThreadNum(4);
 
+    //把当前rpc节点上要发布的服务全部注册到zk上面，让rpc client可以从zk上发现服务
+    ZookeeperClient zk_client;
+    zk_client.start();
+
+    //在配置中心中创建节点
+    for (auto &sp : service_map_)
+    {
+        string service_path = "/" + sp.first;
+        zk_client.create(service_path.c_str(), nullptr, 0);
+        for (auto &mp : sp.second.method_map_)
+        {
+            string method_path = service_path + "/" + mp.first;
+            char method_path_data[128] = {0};
+            sprintf(method_path_data, "%s:%d", ip.c_str(), port);
+            //ZOO_EPHEMERAL 表示znode时候临时性节点
+            zk_client.create(method_path.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
+        }
+    }
+
+    RPC_LOG_INFO("server RpcProvider [ip: %s][port: %d]", ip.c_str(), port);
     //启动网络服务
     server.start();
     eventloop_.loop();
-    RPC_LOG_INFO("server RpcProvider [ip: %s][port: %d]",ip.c_str(),port);
 }
 
 //新socket连接的回调
@@ -135,14 +155,14 @@ void RpcProvider::on_message(const TcpConnectionPtr &conn, Buffer *buffer, Times
     auto service_it = service_map_.find(service_name);
     if (service_it == service_map_.end())
     {
-        RPC_LOG_ERROR("%s is not exist",service_name.c_str());
+        RPC_LOG_ERROR("%s is not exist", service_name.c_str());
         return;
     }
 
     auto method_it = service_it->second.method_map_.find(method_name);
     if (method_it == service_it->second.method_map_.end())
     {
-        RPC_LOG_ERROR("%s::%s is not exist",service_name.c_str(),method_name.c_str());
+        RPC_LOG_ERROR("%s::%s is not exist", service_name.c_str(), method_name.c_str());
         return;
     }
 

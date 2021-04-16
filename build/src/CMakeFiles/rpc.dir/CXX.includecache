@@ -129,6 +129,8 @@ RpcHeader.pb.h
 /home/ubuntu/code/RPC/src/RpcHeader.pb.h
 RpcLogger.hpp
 /home/ubuntu/code/RPC/src/RpcLogger.hpp
+ZookeeperClient.hpp
+/home/ubuntu/code/RPC/src/ZookeeperClient.hpp
 sys/socket.h
 -
 netinet/in.h
@@ -199,6 +201,8 @@ RpcHeader.pb.h
 /home/ubuntu/code/RPC/src/RpcHeader.pb.h
 RpcLogger.hpp
 /home/ubuntu/code/RPC/src/RpcLogger.hpp
+ZookeeperClient.hpp
+/home/ubuntu/code/RPC/src/ZookeeperClient.hpp
 
 /home/ubuntu/code/RPC/src/ZookeeperClient.cpp
 ZookeeperClient.hpp
