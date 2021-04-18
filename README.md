@@ -4,7 +4,15 @@ RPC远程调用框架
 # 使用示例
 直接运行 autobuild.sh
 
-@[TOC]
+邮箱：2107810343@qq.com
+
+时间：2021/4/18 22:55
+
+开发环境：Ubuntu VS Code
+
+编译器：g++
+
+编程语言：C++
 
 # 认识RPC
 RPC的全称是**远程过程调用**（Remote Procedure Call）。
