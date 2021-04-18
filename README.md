@@ -4,7 +4,7 @@ RPC远程调用框架
 # 使用示例
 直接运行 autobuild.sh
 
-@[toc]
+@[TOC]
 
 # 认识RPC
 RPC的全称是**远程过程调用**（Remote Procedure Call）。
